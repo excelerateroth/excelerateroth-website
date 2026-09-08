@@ -36,7 +36,6 @@ export const home = {
     lead: "Reporting and controlling structures for companies that actually use their numbers – built in Power BI or a clean, structured Excel solution, tailored to where you're starting from.",
     ctaLabel: 'Book a call →',
     ctaHref: '/en/contact',
-    placeholderLabel: 'Banner image: portrait or Eastern Switzerland landscape',
   },
   problem: {
     heading: 'Does this sound familiar?',
@@ -60,7 +59,6 @@ export const home = {
     closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
     ctaLabel: 'More about me →',
     ctaHref: '/en/about',
-    placeholderLabel: 'Portrait photo',
   },
   einstieg: {
     heading: 'Getting started',
@@ -86,7 +84,6 @@ export const ueberMich = {
   eyebrow: 'About',
   heading: 'Jennifer Roth',
   lead: 'Business sparring partner for reporting, controlling, and BI structures in companies.',
-  placeholderLabel: 'Portrait photo',
   paragraphs: [
     'Before going self-employed, I spent several years as a business partner in corporate controlling at an internationally active industrial company. I co-managed the monthly close, prepared the related management report, analyzed key figures, and facilitated the planning and budgeting process for the entire business unit.',
     'As part of international SAP rollouts, I configured the controlling structures in SAP customizing and trained local staff. I also co-managed the technical integration of a local time-tracking system with internal cost allocation, including automated postings.',

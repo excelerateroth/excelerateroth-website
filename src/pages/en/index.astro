@@ -11,7 +11,6 @@ import { home, contactInfo } from '../../content/site.en';
   langSwitchHref="/"
 >
   <section class="hero">
-    <span class="hero-placeholder-tag">{home.hero.placeholderLabel}</span>
     <div class="hero-inner">
       <div class="container hero-content">
         <h1>{home.hero.heading}</h1>
@@ -50,9 +49,7 @@ import { home, contactInfo } from '../../content/site.en';
 
   <section class="section-lg">
     <div class="container ueber-inner">
-      <div class="placeholder portrait-placeholder">
-        <span class="placeholder-label">{home.ueberMichTeaser.placeholderLabel}</span>
-      </div>
+      <div class="placeholder portrait-placeholder"></div>
       <div class="ueber-text">
         <h2>{home.ueberMichTeaser.heading}</h2>
         <p>{home.ueberMichTeaser.paragraph}</p>
@@ -109,18 +106,6 @@ import { home, contactInfo } from '../../content/site.en';
     background: var(--green);
     background-image: repeating-linear-gradient(115deg, rgba(222, 216, 207, 0.07) 0 18px, transparent 18px 36px);
     overflow: hidden;
-  }
-
-  .hero-placeholder-tag {
-    position: absolute;
-    top: 20px;
-    right: 24px;
-    font-family: ui-monospace, 'SF Mono', Consolas, monospace;
-    font-size: 12px;
-    color: var(--taupe);
-    background: rgba(28, 30, 29, 0.45);
-    padding: 7px 12px;
-    border-radius: var(--radius-control);
   }
 
   .hero-inner {

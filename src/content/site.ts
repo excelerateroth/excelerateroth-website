@@ -36,7 +36,6 @@ export const home = {
     lead: 'Reporting- und Controlling-Strukturen für Unternehmen, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf die jeweilige Ausgangslage.',
     ctaLabel: 'Gespräch vereinbaren →',
     ctaHref: '/kontakt',
-    placeholderLabel: 'Bannerbild: Porträt oder Berglandschaft Ostschweiz',
   },
   problem: {
     heading: 'Kommt Ihnen das bekannt vor?',
@@ -60,7 +59,6 @@ export const home = {
     closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
     ctaLabel: 'Mehr über mich →',
     ctaHref: '/ueber-mich',
-    placeholderLabel: 'Porträtfoto',
   },
   einstieg: {
     heading: 'Der Einstieg',
@@ -87,7 +85,6 @@ export const ueberMich = {
   eyebrow: 'Über mich',
   heading: 'Jennifer Roth',
   lead: 'Betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen in Unternehmen.',
-  placeholderLabel: 'Porträtfoto',
   paragraphs: [
     'Bevor ich mich selbständig gemacht habe, habe ich mehrere Jahre als betriebswirtschaftliche Sparringpartnerin im Unternehmenscontrolling eines international tätigen Industrieunternehmens gearbeitet.',
     'Ich habe den Monatsabschluss mitverantwortet und den dazugehörigen Managementbericht erstellt. Dazu kamen die Analyse der zentralen Kennzahlen und die Moderation des Planungs- und Budgetprozesses für den gesamten Unternehmensbereich.',
