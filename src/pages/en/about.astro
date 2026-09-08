@@ -1,15 +1,15 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CtaBanner from '../components/CtaBanner.astro';
-import { ueberMich } from '../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { ueberMich } from '../../content/site.en';
 ---
 
 <BaseLayout
   title={ueberMich.meta.title}
   description={ueberMich.meta.description}
   activePage="ueber-mich"
-  lang="de"
-  langSwitchHref="/en/about"
+  lang="en"
+  langSwitchHref="/ueber-mich"
 >
   <section class="header-section">
     <div class="container header-inner">

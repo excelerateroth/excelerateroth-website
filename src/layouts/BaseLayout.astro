@@ -1,20 +1,27 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import * as de from '../content/site';
+import * as en from '../content/site.en';
 import '../styles/global.css';
 
 interface Props {
   title: string;
   description: string;
   activePage?: 'ueber-mich' | 'offerte' | 'kontakt' | 'none';
+  lang?: 'de' | 'en';
+  langSwitchHref: string;
 }
 
-const { title, description, activePage = 'none' } = Astro.props;
+const { title, description, activePage = 'none', lang = 'de', langSwitchHref } = Astro.props;
+const t = lang === 'en' ? en : de;
+const homeHref = lang === 'en' ? '/en/' : '/';
+const htmlLang = lang === 'en' ? 'en' : 'de-CH';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="de-CH">
+<html lang={htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,11 +36,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <div class="page">
-      <SiteHeader activePage={activePage} />
+      <SiteHeader nav={t.nav} homeHref={homeHref} activePage={activePage} lang={lang} langSwitchHref={langSwitchHref} />
       <main>
         <slot />
       </main>
-      <SiteFooter />
+      <SiteFooter footer={t.footer} homeHref={homeHref} />
     </div>
   </body>
 </html>

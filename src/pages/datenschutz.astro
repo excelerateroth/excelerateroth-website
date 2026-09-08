@@ -3,7 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { datenschutz } from '../content/site';
 ---
 
-<BaseLayout title={datenschutz.meta.title} description={datenschutz.meta.description} activePage="none">
+<BaseLayout
+  title={datenschutz.meta.title}
+  description={datenschutz.meta.description}
+  activePage="none"
+  lang="de"
+  langSwitchHref="/en/privacy"
+>
   <section class="legal-section">
     <div class="text-column">
       <h1>{datenschutz.heading}</h1>

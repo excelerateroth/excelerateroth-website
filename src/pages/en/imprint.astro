@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { impressum } from '../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { impressum } from '../../content/site.en';
 ---
 
 <BaseLayout
   title={impressum.meta.title}
   description={impressum.meta.description}
   activePage="none"
-  lang="de"
-  langSwitchHref="/en/imprint"
+  lang="en"
+  langSwitchHref="/impressum"
 >
   <section class="legal-section">
     <div class="text-column">
@@ -18,20 +18,20 @@ import { impressum } from '../content/site';
         <strong>excelerate Roth | Jennifer Roth</strong><br />
         Rheinstrasse 5A<br />
         8280 Kreuzlingen<br />
-        Schweiz
+        Switzerland
       </p>
 
       <p>
-        Telefon: <a href="tel:+41765311610">+41 76 531 16 10</a><br />
-        E-Mail: <a href="mailto:jennifer.roth@excelerateroth.ch">jennifer.roth@excelerateroth.ch</a>
+        Phone: <a href="tel:+41765311610">+41 76 531 16 10</a><br />
+        Email: <a href="mailto:jennifer.roth@excelerateroth.ch">jennifer.roth@excelerateroth.ch</a>
       </p>
 
       <p>
-        Einzelunternehmen. Nicht im Handelsregister eingetragen. Keine Mehrwertsteuerpflicht, daher
-        keine UID-Nummer.
+        Sole proprietorship. Not registered in the Commercial Register. Not subject to VAT,
+        therefore no UID number.
       </p>
 
-      <p>Verantwortlich für den Inhalt dieser Website: Jennifer Roth (Adresse wie oben).</p>
+      <p>Responsible for the content of this website: Jennifer Roth (address as above).</p>
     </div>
   </section>
 </BaseLayout>

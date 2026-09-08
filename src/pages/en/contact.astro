@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { kontakt, contactInfo } from '../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { kontakt, contactInfo } from '../../content/site.en';
 
 const FORMSPREE_FORM_ID = 'xwlkrgrr';
 ---
@@ -9,8 +9,8 @@ const FORMSPREE_FORM_ID = 'xwlkrgrr';
   title={kontakt.meta.title}
   description={kontakt.meta.description}
   activePage="kontakt"
-  lang="de"
-  langSwitchHref="/en/contact"
+  lang="en"
+  langSwitchHref="/kontakt"
 >
   <section class="header-section">
     <div class="container header-inner">
@@ -32,12 +32,12 @@ const FORMSPREE_FORM_ID = 'xwlkrgrr';
         <div class="card options-card">
           <h2>{kontakt.weitereMoeglichkeiten.heading}</h2>
           <div class="options-list">
-            <span class="option-row"><span class="option-label">Telefon</span><a href={contactInfo.phoneHref}>{contactInfo.whatsappNumber}</a></span>
-            <span class="option-row"><span class="option-label">E-Mail</span><a href={contactInfo.emailHref} class="break-anywhere">{contactInfo.email}</a></span>
+            <span class="option-row"><span class="option-label">Phone</span><a href={contactInfo.phoneHref}>{contactInfo.whatsappNumber}</a></span>
+            <span class="option-row"><span class="option-label">Email</span><a href={contactInfo.emailHref} class="break-anywhere">{contactInfo.email}</a></span>
             <span class="option-row"><span class="option-label">LinkedIn</span><a href={contactInfo.linkedinHref} class="break-anywhere">{contactInfo.linkedinLabel}</a></span>
           </div>
           <div class="qr-row">
-            <img src="/qr-vcard.png" alt="vCard QR-Code zum Speichern der Kontaktdaten" class="qr-image" />
+            <img src="/qr-vcard.png" alt="vCard QR code to save the contact details" class="qr-image" />
             <span class="qr-text">{kontakt.weitereMoeglichkeiten.qrLine}</span>
           </div>
         </div>
@@ -49,7 +49,7 @@ const FORMSPREE_FORM_ID = 'xwlkrgrr';
         action={`https://formspree.io/f/${FORMSPREE_FORM_ID}`}
       >
         <h2>{kontakt.form.heading}</h2>
-        <input type="hidden" name="_next" value="/kontakt/danke" />
+        <input type="hidden" name="_next" value="/en/contact/thank-you" />
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
         <label class="field-label" for="name">
@@ -92,7 +92,7 @@ const FORMSPREE_FORM_ID = 'xwlkrgrr';
         <span class="form-note">{kontakt.form.note}</span>
         <span class="privacy-note">
           {kontakt.form.privacyNote}{' '}
-          <a href="/datenschutz">{kontakt.form.privacyLinkLabel}</a>.
+          <a href="/en/privacy">{kontakt.form.privacyLinkLabel}</a>.
         </span>
       </form>
     </div>

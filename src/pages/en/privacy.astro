@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { datenschutz } from '../../content/site.en';
+---
+
+<BaseLayout
+  title={datenschutz.meta.title}
+  description={datenschutz.meta.description}
+  activePage="none"
+  lang="en"
+  langSwitchHref="/datenschutz"
+>
+  <section class="legal-section">
+    <div class="text-column">
+      <h1>{datenschutz.heading}</h1>
+
+      <div class="block">
+        <h2>Data Controller</h2>
+        <p>
+          excelerate Roth | Jennifer Roth, Rheinstrasse 5A, 8280 Kreuzlingen,{' '}
+          <a href="mailto:jennifer.roth@excelerateroth.ch">jennifer.roth@excelerateroth.ch</a>
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>What data is processed</h2>
+        <p>
+          If you contact me via the contact form, email, WhatsApp, or phone, I process the
+          information you provide – in particular your name, contact details, and the content of
+          your inquiry.
+        </p>
+        <p>No cookies or analytics tools are currently used when you visit this website.</p>
+      </div>
+
+      <div class="block">
+        <h2>Purpose of processing</h2>
+        <p>
+          The data is used exclusively to respond to your inquiry and to initiate or carry out any
+          resulting collaboration.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Hosting</h2>
+        <p>
+          This website is hosted and delivered via GitHub Pages (GitHub Inc., USA). This may
+          involve transferring technical access data (e.g. IP address) to the USA. GitHub provides
+          contractual guarantees (Standard Contractual Clauses) to ensure an adequate level of
+          data protection.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Email and contact form</h2>
+        <p>
+          Inquiries via the contact form or email are processed through Microsoft 365 (Microsoft
+          Corporation) and may be processed outside of Switzerland. Microsoft provides contractual
+          guarantees (Standard Contractual Clauses) to ensure an adequate level of data protection.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>WhatsApp Business</h2>
+        <p>
+          If you contact me via WhatsApp, the content of this communication is processed by
+          WhatsApp / Meta Platforms Ireland Limited (and, where applicable, Meta Platforms, Inc.,
+          USA). This may involve data transfers to countries outside Switzerland and the EU,
+          including the USA. If you would prefer not to use WhatsApp, please contact me instead
+          via email, phone, or the contact form.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Retention period</h2>
+        <p>
+          Your data is retained for as long as necessary to process your inquiry or for an
+          ongoing collaboration, and beyond that where legal retention obligations apply.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Your rights</h2>
+        <p>
+          You have the right to request information about the data I process about you, as well
+          as its correction, deletion, or restriction of processing, to the extent permitted by
+          law. Please contact me at the address given above.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Changes</h2>
+        <p>
+          This privacy policy may be updated as needed, for example if the website or the
+          services used change.
+        </p>
+      </div>
+
+      <p class="stand">Last updated: September 8, 2026</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-section {
+    padding: var(--section-padding-y) var(--page-padding) clamp(56px, 8vw, 110px);
+  }
+
+  .text-column {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .text-column > h1 {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: -8px;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .block h2 {
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .block p {
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.65;
+  }
+
+  .stand {
+    font-size: 15px;
+    color: var(--ink-soft);
+    padding-top: 12px;
+    border-top: 1px solid var(--border-line);
+  }
+</style>

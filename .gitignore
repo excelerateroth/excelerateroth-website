@@ -23,3 +23,6 @@ Thumbs.db
 
 # Original Design-Handoff-ZIP (Inhalt liegt bereits entpackt in design_handoff_excelerate_website/)
 Corporate Design für Excelerate.2.zip
+
+# Interne Claude-Code-Sitzungsdatei
+.claude/scheduled_tasks.lock

@@ -1,15 +1,24 @@
 ---
-import { nav } from '../content/site';
-
-interface Props {
-  activePage?: 'ueber-mich' | 'offerte' | 'kontakt' | 'none';
+interface NavContent {
+  arbeit: { label: string; href: string };
+  ueberMich: { label: string; href: string };
+  offerte: { label: string; href: string };
+  kontakt: { label: string; href: string };
 }
 
-const { activePage = 'none' } = Astro.props;
+interface Props {
+  nav: NavContent;
+  homeHref: string;
+  activePage?: 'ueber-mich' | 'offerte' | 'kontakt' | 'none';
+  lang: 'de' | 'en';
+  langSwitchHref: string;
+}
+
+const { nav, homeHref, activePage = 'none', lang, langSwitchHref } = Astro.props;
 ---
 
 <header class="site-header">
-  <a href="/" class="logo-link">
+  <a href={homeHref} class="logo-link">
     <img src="/logo-excelerate.png" alt="excelerate Roth" class="logo" />
   </a>
   <nav class="site-nav">
@@ -29,6 +38,9 @@ const { activePage = 'none' } = Astro.props;
       aria-current={activePage === 'offerte' ? 'page' : undefined}
     >
       {nav.offerte.label}
+    </a>
+    <a href={langSwitchHref} class="lang-switch" aria-label={lang === 'de' ? 'Switch to English' : 'Auf Deutsch anzeigen'}>
+      {lang === 'de' ? 'EN' : 'DE'}
     </a>
     <a href={nav.kontakt.href} class="btn btn-primary btn-sm">{nav.kontakt.label}</a>
   </nav>
@@ -87,5 +99,25 @@ const { activePage = 'none' } = Astro.props;
 
   .nav-link.active:hover {
     color: var(--green);
+  }
+
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    padding: 5px 8px;
+    border-radius: var(--radius-control);
+    border: 1px solid rgba(28, 68, 60, 0.3);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .lang-switch:hover {
+    color: var(--green);
+    border-color: var(--green);
+    background: rgba(28, 68, 60, 0.06);
   }
 </style>

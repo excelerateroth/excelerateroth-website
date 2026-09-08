@@ -1,9 +1,21 @@
 ---
-import { footer } from '../content/site';
+interface FooterContent {
+  tagline: string;
+  impressum: { label: string; href: string };
+  datenschutz: { label: string; href: string };
+  copyright: string;
+}
+
+interface Props {
+  footer: FooterContent;
+  homeHref: string;
+}
+
+const { footer, homeHref } = Astro.props;
 ---
 
 <footer class="site-footer">
-  <a href="/" class="footer-logo-link">
+  <a href={homeHref} class="footer-logo-link">
     <img src="/logo-excelerate.png" alt="excelerate Roth" class="footer-logo" />
   </a>
   <span class="tagline">{footer.tagline}</span>

@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { home, contactInfo } from '../content/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { home, contactInfo } from '../../content/site.en';
 ---
 
 <BaseLayout
   title={home.meta.title}
   description={home.meta.description}
   activePage="none"
-  lang="de"
-  langSwitchHref="/en/"
+  lang="en"
+  langSwitchHref="/"
 >
   <section class="hero">
     <span class="hero-placeholder-tag">{home.hero.placeholderLabel}</span>
@@ -39,7 +39,7 @@ import { home, contactInfo } from '../content/site';
     </div>
   </section>
 
-  <section id="arbeit" class="section-lg arbeit-section">
+  <section id="work" class="section-lg arbeit-section">
     <div class="container arbeit-inner">
       <h2>{home.arbeit.heading}</h2>
       <div class="arbeit-text">
@@ -83,7 +83,7 @@ import { home, contactInfo } from '../content/site';
         </div>
       </div>
       <div class="card qr-card">
-        <img src="/qr-vcard.png" alt="vCard QR-Code zum Speichern der Kontaktdaten" class="qr-image" />
+        <img src="/qr-vcard.png" alt="vCard QR code to save the contact details" class="qr-image" />
         <div class="qr-text">
           <span class="qr-line">{home.kontaktCta.qrLine}</span>
           <a href={contactInfo.whatsappHref}>WhatsApp {contactInfo.whatsappNumber}</a>
@@ -183,7 +183,7 @@ import { home, contactInfo } from '../content/site';
     background: var(--green-2);
   }
 
-  /* Wie ich arbeite */
+  /* How I work */
   .arbeit-section {
     background: var(--sand);
   }
@@ -213,7 +213,7 @@ import { home, contactInfo } from '../content/site';
     line-height: 1.6;
   }
 
-  /* Über mich teaser */
+  /* About teaser */
   .ueber-inner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -254,7 +254,7 @@ import { home, contactInfo } from '../content/site';
     color: var(--ink-soft);
   }
 
-  /* Einstieg */
+  /* Getting started */
   .einstieg-section {
     background: var(--green);
     color: var(--paper);
@@ -281,7 +281,7 @@ import { home, contactInfo } from '../content/site';
     color: var(--sand);
   }
 
-  /* Kontakt CTA */
+  /* Contact CTA */
   .kontakt-inner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));

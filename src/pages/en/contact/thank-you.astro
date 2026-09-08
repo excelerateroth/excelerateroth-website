@@ -1,19 +1,19 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { kontakt } from '../../content/site';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { kontakt } from '../../../content/site.en';
 ---
 
 <BaseLayout
-  title={`Danke | excelerate Roth`}
+  title={`Thank you | excelerate Roth`}
   description={kontakt.form.successMessage}
   activePage="kontakt"
-  lang="de"
-  langSwitchHref="/en/contact/thank-you"
+  lang="en"
+  langSwitchHref="/kontakt/danke"
 >
   <section class="danke-section">
     <div class="container card danke-card">
       <h1>{kontakt.form.successMessage}</h1>
-      <a href="/" class="btn btn-primary">Zurück zur Startseite</a>
+      <a href="/en/" class="btn btn-primary">Back to homepage</a>
     </div>
   </section>
 </BaseLayout>
