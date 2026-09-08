@@ -39,8 +39,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 </html>
 
 <style is:global>
+  /* overflow-x:hidden bewusst nicht auf .page (Sticky-Header-Vorfahre) gesetzt —
+     das würde position:sticky in vielen Browsern brechen. Stattdessen auf html,
+     dem Wurzel-Scroll-Container, wo Sticky-Elemente davon unberührt bleiben. */
+  html {
+    overflow-x: hidden;
+  }
+
   .page {
     width: 100%;
-    overflow-x: hidden;
   }
 </style>

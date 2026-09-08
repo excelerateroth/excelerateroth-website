@@ -9,7 +9,7 @@ export const nav = {
 };
 
 export const footer = {
-  tagline: 'Im Einsatz in der ganzen DACH-Region – vor Ort oder online.',
+  tagline: 'Im Einsatz in der ganzen DACH-Region',
   impressum: { label: 'Impressum', href: '/impressum' },
   datenschutz: { label: 'Datenschutz', href: '/datenschutz' },
   copyright: '© 2026 excelerate Roth',

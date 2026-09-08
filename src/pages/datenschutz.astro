@@ -1,9 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { datenschutz } from '../content/site';
-
-// TODO: "Stand"-Datum unten eintragen, sobald die Seite tatsächlich veröffentlicht wird
-// (siehe ANLEITUNG.md). Text vorab von einer Fachperson prüfen lassen (Hinweis dazu direkt im Text).
 ---
 
 <BaseLayout title={datenschutz.meta.title} description={datenschutz.meta.description} activePage="none">
@@ -11,17 +8,10 @@ import { datenschutz } from '../content/site';
     <div class="text-column">
       <h1>{datenschutz.heading}</h1>
 
-      <p class="note">
-        Rechtlicher Hinweis vorab: Ich bin keine Juristin – dieser Entwurf orientiert sich am
-        revidierten Schweizer Datenschutzgesetz (revDSG, in Kraft seit 1. September 2023), sollte
-        aber vor Veröffentlichung von einer Fachperson (z. B. Ihrem Treuhänder oder einer Anwältin)
-        geprüft werden.
-      </p>
-
       <div class="block">
         <h2>Verantwortliche Person</h2>
         <p>
-          Jennifer Roth, J. Roth | Excelerate, Rheinstrasse 5A, 8280 Kreuzlingen,{' '}
+          excelerate Roth | Jennifer Roth, Rheinstrasse 5A, 8280 Kreuzlingen,{' '}
           <a href="mailto:jennifer.roth@excelerateroth.ch">jennifer.roth@excelerateroth.ch</a>
         </p>
       </div>
@@ -99,7 +89,7 @@ import { datenschutz } from '../content/site';
         </p>
       </div>
 
-      <p class="stand">Stand: [Datum bei Veröffentlichung einfügen]</p>
+      <p class="stand">Stand: 08. September 2026</p>
     </div>
   </section>
 </BaseLayout>
@@ -122,15 +112,6 @@ import { datenschutz } from '../content/site';
     line-height: 1.08;
     letter-spacing: -0.02em;
     margin-bottom: -8px;
-  }
-
-  .note {
-    color: var(--ink-soft);
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 16px 20px;
-    background: var(--sand);
-    border-radius: var(--radius-card);
   }
 
   .block {
