@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.excelerateroth.ch/sitemap-index.xml

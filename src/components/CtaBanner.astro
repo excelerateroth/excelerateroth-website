@@ -1,0 +1,46 @@
+---
+interface Props {
+  heading: string;
+  ctaLabel: string;
+  ctaHref: string;
+  background?: 'paper' | 'sand';
+  headingMaxWidth?: string;
+}
+
+const { heading, ctaLabel, ctaHref, background = 'paper', headingMaxWidth = '22ch' } = Astro.props;
+---
+
+<section class:list={['cta-banner', background]}>
+  <div class="container inner">
+    <h2 style={`max-width:${headingMaxWidth}`}>{heading}</h2>
+    <a href={ctaHref} class="btn btn-primary">{ctaLabel}</a>
+  </div>
+</section>
+
+<style>
+  .cta-banner {
+    padding: clamp(48px, 7vw, 90px) var(--page-padding);
+  }
+
+  .cta-banner.sand {
+    background: var(--sand);
+  }
+
+  .cta-banner.paper {
+    background: var(--paper);
+  }
+
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .inner h2 {
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+</style>

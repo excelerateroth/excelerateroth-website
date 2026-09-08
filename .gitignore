@@ -1,0 +1,25 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+
+# Environment variables
+.env
+.env.production
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Original Design-Handoff-ZIP (Inhalt liegt bereits entpackt in design_handoff_excelerate_website/)
+Corporate Design für Excelerate.2.zip

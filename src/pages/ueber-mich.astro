@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { ueberMich } from '../content/site';
+---
+
+<BaseLayout title={ueberMich.meta.title} description={ueberMich.meta.description} activePage="ueber-mich">
+  <section class="header-section">
+    <div class="container header-inner">
+      <div class="header-text">
+        <span class="eyebrow">{ueberMich.eyebrow}</span>
+        <h1>{ueberMich.heading}</h1>
+        <p class="lead">{ueberMich.lead}</p>
+      </div>
+      <div class="placeholder portrait-placeholder">
+        <span class="placeholder-label">{ueberMich.placeholderLabel}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-section">
+    <div class="text-column">
+      {ueberMich.paragraphs.map((p) => <p>{p}</p>)}
+      <p class="closing-line">{ueberMich.closingLine}</p>
+    </div>
+  </section>
+
+  <CtaBanner
+    heading={ueberMich.cta.heading}
+    ctaLabel={ueberMich.cta.ctaLabel}
+    ctaHref={ueberMich.cta.ctaHref}
+    background="sand"
+  />
+</BaseLayout>
+
+<style>
+  .header-section {
+    padding: var(--section-padding-y) var(--page-padding) clamp(32px, 4vw, 56px);
+  }
+
+  .header-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 0;
+  }
+
+  .header-text h1 {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    max-width: 18ch;
+  }
+
+  .lead {
+    font-size: clamp(18px, 1.7vw, 22px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 48ch;
+  }
+
+  .portrait-placeholder {
+    min-width: 0;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .text-section {
+    padding: 0 var(--page-padding) clamp(56px, 8vw, 110px);
+  }
+
+  .text-column {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .text-column p {
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.65;
+  }
+
+  .closing-line {
+    padding-top: 8px;
+    border-top: 1px solid var(--border-line);
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    color: var(--ink-soft);
+  }
+</style>

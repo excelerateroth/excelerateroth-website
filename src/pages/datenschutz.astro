@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { datenschutz } from '../content/site';
+
+// TODO: "Stand"-Datum unten eintragen, sobald die Seite tatsächlich veröffentlicht wird
+// (siehe ANLEITUNG.md). Text vorab von einer Fachperson prüfen lassen (Hinweis dazu direkt im Text).
+---
+
+<BaseLayout title={datenschutz.meta.title} description={datenschutz.meta.description} activePage="none">
+  <section class="legal-section">
+    <div class="text-column">
+      <h1>{datenschutz.heading}</h1>
+
+      <p class="note">
+        Rechtlicher Hinweis vorab: Ich bin keine Juristin – dieser Entwurf orientiert sich am
+        revidierten Schweizer Datenschutzgesetz (revDSG, in Kraft seit 1. September 2023), sollte
+        aber vor Veröffentlichung von einer Fachperson (z. B. Ihrem Treuhänder oder einer Anwältin)
+        geprüft werden.
+      </p>
+
+      <div class="block">
+        <h2>Verantwortliche Person</h2>
+        <p>
+          Jennifer Roth, J. Roth | Excelerate, Rheinstrasse 5A, 8280 Kreuzlingen,{' '}
+          <a href="mailto:jennifer.roth@excelerateroth.ch">jennifer.roth@excelerateroth.ch</a>
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Welche Daten werden bearbeitet</h2>
+        <p>
+          Wenn Sie über das Kontaktformular, per E-Mail, per WhatsApp oder telefonisch mit mir in
+          Kontakt treten, bearbeite ich die Angaben, die Sie mir dabei zur Verfügung stellen –
+          insbesondere Name, Kontaktdaten und den Inhalt Ihrer Anfrage.
+        </p>
+        <p>
+          Beim Besuch dieser Website selbst werden aktuell keine Cookies oder Analyse-Tools
+          eingesetzt.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Zweck der Bearbeitung</h2>
+        <p>
+          Die Daten werden ausschliesslich zur Beantwortung Ihrer Anfrage und zur Anbahnung bzw.
+          Abwicklung einer allfälligen Zusammenarbeit genutzt.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Hosting</h2>
+        <p>Diese Website wird bei Hostpoint AG mit Serverstandort Schweiz gehostet.</p>
+      </div>
+
+      <div class="block">
+        <h2>E-Mail und Kontaktformular</h2>
+        <p>
+          Anfragen über das Kontaktformular oder per E-Mail werden über Microsoft 365 (Microsoft
+          Corporation) verarbeitet und können dabei auch ausserhalb der Schweiz verarbeitet werden.
+          Microsoft bietet hierfür vertragliche Garantien (Standardvertragsklauseln) für ein
+          angemessenes Datenschutzniveau.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>WhatsApp Business</h2>
+        <p>
+          Wenn Sie mich über WhatsApp kontaktieren, werden die Inhalte dieser Kommunikation von
+          WhatsApp bzw. der Meta Platforms Ireland Limited (und gegebenenfalls der Meta Platforms,
+          Inc., USA) verarbeitet. Dabei kann es zu einer Datenübermittlung in Länder ausserhalb der
+          Schweiz und der EU kommen, einschliesslich der USA. Wenn Sie das nicht wünschen,
+          kontaktieren Sie mich bitte alternativ per E-Mail, Telefon oder über das Kontaktformular.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Aufbewahrungsdauer</h2>
+        <p>
+          Ihre Daten werden so lange aufbewahrt, wie dies für die Bearbeitung Ihrer Anfrage bzw.
+          für eine bestehende Zusammenarbeit erforderlich ist, sowie darüber hinaus, soweit
+          gesetzliche Aufbewahrungspflichten bestehen.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Ihre Rechte</h2>
+        <p>
+          Sie haben das Recht, Auskunft über die von mir bearbeiteten Daten zu verlangen sowie
+          deren Berichtigung, Löschung oder Einschränkung der Bearbeitung zu verlangen, soweit
+          gesetzlich zulässig. Wenden Sie sich dazu an die oben genannte Kontaktadresse.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Änderungen</h2>
+        <p>
+          Diese Datenschutzerklärung kann bei Bedarf angepasst werden, etwa wenn sich die Website
+          oder die eingesetzten Dienste ändern.
+        </p>
+      </div>
+
+      <p class="stand">Stand: [Datum bei Veröffentlichung einfügen]</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-section {
+    padding: var(--section-padding-y) var(--page-padding) clamp(56px, 8vw, 110px);
+  }
+
+  .text-column {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .text-column > h1 {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: -8px;
+  }
+
+  .note {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 16px 20px;
+    background: var(--sand);
+    border-radius: var(--radius-card);
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .block h2 {
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .block p {
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.65;
+  }
+
+  .stand {
+    font-size: 15px;
+    color: var(--ink-soft);
+    padding-top: 12px;
+    border-top: 1px solid var(--border-line);
+  }
+</style>

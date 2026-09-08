@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { impressum } from '../content/site';
+---
+
+<BaseLayout title={impressum.meta.title} description={impressum.meta.description} activePage="none">
+  <section class="legal-section">
+    <div class="text-column">
+      <h1>{impressum.heading}</h1>
+
+      <p>
+        <strong>J. Roth | Excelerate Jennifer Roth</strong><br />
+        Rheinstrasse 5A<br />
+        8280 Kreuzlingen<br />
+        Schweiz
+      </p>
+
+      <p>
+        Telefon: <a href="tel:+41765311610">+41 76 531 16 10</a><br />
+        E-Mail: <a href="mailto:jennifer.roth@excelerateroth.ch">jennifer.roth@excelerateroth.ch</a>
+      </p>
+
+      <p>
+        Einzelunternehmen. Nicht im Handelsregister eingetragen. Keine Mehrwertsteuerpflicht, daher
+        keine UID-Nummer.
+      </p>
+
+      <p>Verantwortlich für den Inhalt dieser Website: Jennifer Roth (Adresse wie oben).</p>
+
+      <p class="note">
+        Hinweis: Sobald eine Handelsregister-Eintragung oder MWST-Pflicht besteht, muss dieser
+        Abschnitt entsprechend ergänzt werden (Handelsregisternummer bzw. UID).
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-section {
+    padding: var(--section-padding-y) var(--page-padding) clamp(56px, 8vw, 110px);
+  }
+
+  .text-column {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .text-column h1 {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .text-column p {
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.65;
+  }
+
+  .note {
+    color: var(--ink-soft);
+    font-size: 15px !important;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-line);
+  }
+</style>

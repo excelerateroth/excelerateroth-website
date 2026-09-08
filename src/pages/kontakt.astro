@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { kontakt, contactInfo } from '../content/site';
+
+// TODO: Formular-Backend anbinden — siehe ANLEITUNG.md, Abschnitt "Kontaktformular anbinden".
+// Sobald ein Formspree-Konto besteht, die eigene Formular-ID hier eintragen.
+const FORMSPREE_FORM_ID = 'YOUR_FORM_ID';
+---
+
+<BaseLayout title={kontakt.meta.title} description={kontakt.meta.description} activePage="kontakt">
+  <section class="header-section">
+    <div class="container header-inner">
+      <span class="eyebrow">{kontakt.eyebrow}</span>
+      <h1>{kontakt.heading}</h1>
+      <p class="lead">{kontakt.lead}</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container content-grid">
+      <div class="left-column">
+        <div class="card whatsapp-card">
+          <span class="eyebrow eyebrow-on-dark">{kontakt.whatsapp.eyebrow}</span>
+          <span class="whatsapp-number">{contactInfo.whatsappNumber}</span>
+          <a href={contactInfo.whatsappHref} class="btn btn-on-dark">{kontakt.whatsapp.ctaLabel}</a>
+        </div>
+
+        <div class="card options-card">
+          <h2>{kontakt.weitereMoeglichkeiten.heading}</h2>
+          <div class="options-list">
+            <span class="option-row"><span class="option-label">Telefon</span><a href={contactInfo.phoneHref}>{contactInfo.whatsappNumber}</a></span>
+            <span class="option-row"><span class="option-label">E-Mail</span><a href={contactInfo.emailHref} class="break-anywhere">{contactInfo.email}</a></span>
+            <span class="option-row"><span class="option-label">LinkedIn</span><a href={contactInfo.linkedinHref} class="break-anywhere">{contactInfo.linkedinLabel}</a></span>
+          </div>
+          <div class="qr-row">
+            <img src="/qr-vcard.png" alt="vCard QR-Code zum Speichern der Kontaktdaten" class="qr-image" />
+            <span class="qr-text">{kontakt.weitereMoeglichkeiten.qrLine}</span>
+          </div>
+        </div>
+      </div>
+
+      <form
+        class="card contact-form"
+        method="POST"
+        action={`https://formspree.io/f/${FORMSPREE_FORM_ID}`}
+      >
+        <h2>{kontakt.form.heading}</h2>
+        <input type="hidden" name="_next" value="/kontakt/danke" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <label class="field-label" for="name">
+          {kontakt.form.nameLabel}
+          <input
+            id="name"
+            class="field-input"
+            type="text"
+            name="name"
+            placeholder={kontakt.form.namePlaceholder}
+            required
+          />
+        </label>
+
+        <label class="field-label" for="email">
+          {kontakt.form.emailLabel}
+          <input
+            id="email"
+            class="field-input"
+            type="email"
+            name="_replyto"
+            placeholder={kontakt.form.emailPlaceholder}
+            required
+          />
+        </label>
+
+        <label class="field-label message-label" for="message">
+          {kontakt.form.messageLabel}
+          <textarea
+            id="message"
+            class="field-input"
+            name="message"
+            rows="6"
+            placeholder={kontakt.form.messagePlaceholder}
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary submit-btn">{kontakt.form.submitLabel}</button>
+        <span class="form-note">{kontakt.form.note}</span>
+        <span class="privacy-note">
+          {kontakt.form.privacyNote}{' '}
+          <a href="/datenschutz">{kontakt.form.privacyLinkLabel}</a>.
+        </span>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .header-section {
+    padding: var(--section-padding-y) var(--page-padding) clamp(36px, 5vw, 56px);
+  }
+
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .header-inner h1 {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
+  }
+
+  .lead {
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+
+  .content-section {
+    padding: 0 var(--page-padding) clamp(56px, 8vw, 110px);
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: clamp(24px, 3vw, 40px);
+    align-items: stretch;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+    height: 100%;
+  }
+
+  .whatsapp-card {
+    background: var(--green);
+    color: var(--paper);
+    padding: clamp(26px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .whatsapp-number {
+    font-size: clamp(24px, 2.6vw, 32px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .whatsapp-card .btn {
+    align-self: flex-start;
+    font-size: 17px;
+    padding: 15px 28px;
+  }
+
+  .options-card {
+    padding: clamp(26px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1 1 auto;
+  }
+
+  .options-card h2 {
+    font-size: 20px;
+  }
+
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .option-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .option-label {
+    color: var(--ink-soft);
+    min-width: 78px;
+  }
+
+  .break-anywhere {
+    overflow-wrap: anywhere;
+  }
+
+  .qr-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    padding-top: 18px;
+    margin-top: auto;
+    border-top: 1px solid var(--border-card);
+  }
+
+  .qr-image {
+    width: 112px;
+    height: 112px;
+    border-radius: var(--radius-control);
+    display: block;
+  }
+
+  .qr-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    flex: 1 1 160px;
+  }
+
+  /* Form */
+  .contact-form {
+    padding: clamp(26px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+    height: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 20px;
+  }
+
+  .message-label {
+    flex: 1 1 auto;
+  }
+
+  .message-label textarea {
+    flex: 1 1 auto;
+  }
+
+  .submit-btn {
+    align-self: flex-start;
+    font-size: 17px;
+    padding: 16px 32px;
+  }
+
+  .form-note {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  .privacy-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+</style>

@@ -1,0 +1,318 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { offerte } from '../content/site';
+---
+
+<BaseLayout title={offerte.meta.title} description={offerte.meta.description} activePage="offerte">
+  <section class="header-section">
+    <div class="container header-inner">
+      <span class="eyebrow">{offerte.eyebrow}</span>
+      <h1>{offerte.heading}</h1>
+      <p class="lead">{offerte.lead}</p>
+    </div>
+  </section>
+
+  <section class="kostenlos-section">
+    <div class="container card kostenlos-card">
+      <div class="kostenlos-text">
+        <span class="eyebrow">{offerte.kostenlos.eyebrow}</span>
+        <h2 class="h2-md">{offerte.kostenlos.heading}</h2>
+        <p class="body-text">{offerte.kostenlos.text}</p>
+      </div>
+      <div class="kostenlos-cta">
+        <a href={offerte.kostenlos.ctaHref} class="btn btn-primary">{offerte.kostenlos.ctaLabel}</a>
+        <span class="note">{offerte.kostenlos.note}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="einstieg-section">
+    <div class="container einstieg-inner">
+      <div class="einstieg-intro">
+        <span class="eyebrow">{offerte.einstieg.eyebrow}</span>
+        <h2 class="h2-lg">{offerte.einstieg.heading}</h2>
+        <p class="intro-text">{offerte.einstieg.intro}</p>
+      </div>
+      <div class="steps-grid">
+        {
+          offerte.einstieg.steps.map((step) => (
+            <div class:list={['step-card', { highlighted: step.highlighted }]}>
+              <span class="step-duration">{step.duration}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+          ))
+        }
+      </div>
+      {offerte.einstieg.paragraphs.map((p) => <p class="body-text-soft">{p}</p>)}
+    </div>
+  </section>
+
+  <section class="umsetzung-section">
+    <div class="container umsetzung-inner">
+      <div class="umsetzung-intro">
+        <span class="eyebrow umsetzung-eyebrow">{offerte.umsetzung.eyebrow}</span>
+        <h2 class="h2-lg">{offerte.umsetzung.heading}</h2>
+        <p class="body-text">{offerte.umsetzung.intro}</p>
+      </div>
+      <div class="umsetzung-grid">
+        {
+          offerte.umsetzung.cards.map((card) => (
+            <div class="umsetzung-card">
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="body-text">{offerte.umsetzung.outro}</p>
+    </div>
+  </section>
+
+  <section class="schulung-section">
+    <div class="container schulung-inner">
+      <h2 class="h2-md">{offerte.schulung.heading}</h2>
+      <p class="body-text">{offerte.schulung.text}</p>
+    </div>
+  </section>
+
+  <CtaBanner
+    heading={offerte.cta.heading}
+    ctaLabel={offerte.cta.ctaLabel}
+    ctaHref={offerte.cta.ctaHref}
+    background="paper"
+    headingMaxWidth="24ch"
+  />
+</BaseLayout>
+
+<style>
+  .header-section {
+    padding: var(--section-padding-y) var(--page-padding) clamp(36px, 5vw, 64px);
+  }
+
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .header-inner h1 {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
+  }
+
+  .lead {
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+
+  .h2-md {
+    font-size: clamp(23px, 2.8vw, 34px);
+    line-height: 1.16;
+    letter-spacing: -0.015em;
+  }
+
+  .h2-lg {
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  .body-text {
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.6;
+  }
+
+  .body-text-soft {
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 70ch;
+  }
+
+  /* Kostenlos */
+  .kostenlos-section {
+    padding: 0 var(--page-padding) clamp(48px, 7vw, 88px);
+  }
+
+  .kostenlos-card {
+    padding: clamp(28px, 4vw, 52px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(24px, 4vw, 52px);
+    align-items: center;
+  }
+
+  .kostenlos-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .kostenlos-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+
+  .kostenlos-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .kostenlos-cta .btn {
+    align-self: flex-start;
+  }
+
+  .note {
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  /* Einstieg */
+  .einstieg-section {
+    padding: 0 var(--page-padding) clamp(48px, 7vw, 96px);
+  }
+
+  .einstieg-inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 3vw, 36px);
+  }
+
+  .einstieg-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 62ch;
+  }
+
+  .intro-text {
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: clamp(16px, 2vw, 24px);
+  }
+
+  .step-card {
+    background: var(--white);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .step-card h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .step-card p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .step-duration {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-2);
+    font-weight: 600;
+  }
+
+  .step-card.highlighted {
+    background: var(--green);
+    color: var(--paper);
+    border-color: transparent;
+  }
+
+  .step-card.highlighted .step-duration {
+    color: var(--taupe);
+  }
+
+  .step-card.highlighted p {
+    color: var(--sand);
+  }
+
+  /* Umsetzung */
+  .umsetzung-section {
+    background: var(--sand);
+    padding: var(--section-padding-y) var(--page-padding);
+  }
+
+  .umsetzung-inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 3vw, 40px);
+  }
+
+  .umsetzung-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 62ch;
+  }
+
+  .umsetzung-eyebrow {
+    color: var(--green);
+  }
+
+  .umsetzung-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+    gap: clamp(16px, 2vw, 24px);
+  }
+
+  .umsetzung-card {
+    background: var(--paper);
+    border: 1px solid rgba(28, 68, 60, 0.16);
+    border-radius: var(--radius-card);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .umsetzung-card h3 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .umsetzung-card p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* Schulung */
+  .schulung-section {
+    padding: var(--section-padding-y) var(--page-padding) 0;
+  }
+
+  .schulung-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(24px, 4vw, 56px);
+    align-items: center;
+  }
+
+  .schulung-inner p {
+    max-width: 52ch;
+  }
+</style>

@@ -1,0 +1,345 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { home, contactInfo } from '../content/site';
+---
+
+<BaseLayout title={home.meta.title} description={home.meta.description} activePage="none">
+  <section class="hero">
+    <span class="hero-placeholder-tag">{home.hero.placeholderLabel}</span>
+    <div class="hero-inner">
+      <div class="container hero-content">
+        <h1>{home.hero.heading}</h1>
+        <p class="hero-lead">{home.hero.lead}</p>
+        <div>
+          <a href={home.hero.ctaHref} class="btn btn-on-dark">{home.hero.ctaLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lg">
+    <div class="container problem-inner">
+      <h2 class="problem-heading">{home.problem.heading}</h2>
+      <div class="auto-grid">
+        {
+          home.problem.items.map((item) => (
+            <div class="card problem-card">
+              <span class="accent-bar" />
+              <p>{item}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="arbeit" class="section-lg arbeit-section">
+    <div class="container arbeit-inner">
+      <h2>{home.arbeit.heading}</h2>
+      <div class="arbeit-text">
+        {home.arbeit.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lg">
+    <div class="container ueber-inner">
+      <div class="placeholder portrait-placeholder">
+        <span class="placeholder-label">{home.ueberMichTeaser.placeholderLabel}</span>
+      </div>
+      <div class="ueber-text">
+        <h2>{home.ueberMichTeaser.heading}</h2>
+        <p>{home.ueberMichTeaser.paragraph}</p>
+        <p class="closing-line">{home.ueberMichTeaser.closingLine}</p>
+        <div>
+          <a href={home.ueberMichTeaser.ctaHref} class="btn btn-secondary">{home.ueberMichTeaser.ctaLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lg einstieg-section">
+    <div class="container einstieg-inner">
+      <h2>{home.einstieg.heading}</h2>
+      <p>{home.einstieg.paragraph}</p>
+      <a href={home.einstieg.ctaHref} class="btn btn-outline-on-dark">{home.einstieg.ctaLabel}</a>
+    </div>
+  </section>
+
+  <section class="section-lg">
+    <div class="container kontakt-inner">
+      <div class="kontakt-text">
+        <h2 class="kontakt-heading">{home.kontaktCta.heading}</h2>
+        <p class="kontakt-subline">{home.kontaktCta.subline}</p>
+        <div class="kontakt-buttons">
+          <a href={contactInfo.whatsappHref} class="btn btn-primary">{home.kontaktCta.primaryLabel}</a>
+          <a href={contactInfo.emailHref} class="btn btn-secondary">{home.kontaktCta.secondaryLabel}</a>
+        </div>
+      </div>
+      <div class="card qr-card">
+        <img src="/qr-vcard.png" alt="vCard QR-Code zum Speichern der Kontaktdaten" class="qr-image" />
+        <div class="qr-text">
+          <span class="qr-line">{home.kontaktCta.qrLine}</span>
+          <a href={contactInfo.whatsappHref}>WhatsApp {contactInfo.whatsappNumber}</a>
+          <a href={contactInfo.emailHref} class="break-anywhere">{contactInfo.email}</a>
+          <a href={contactInfo.linkedinHref}>LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section-lg {
+    padding: var(--section-padding-y-lg) var(--page-padding);
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: clamp(460px, 74vh, 760px);
+    display: flex;
+    align-items: flex-end;
+    background: var(--green);
+    background-image: repeating-linear-gradient(115deg, rgba(222, 216, 207, 0.07) 0 18px, transparent 18px 36px);
+    overflow: hidden;
+  }
+
+  .hero-placeholder-tag {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+    font-size: 12px;
+    color: var(--taupe);
+    background: rgba(28, 30, 29, 0.45);
+    padding: 7px 12px;
+    border-radius: var(--radius-control);
+  }
+
+  .hero-inner {
+    position: relative;
+    width: 100%;
+    padding: clamp(48px, 8vw, 96px) var(--page-padding);
+    background: linear-gradient(to top, rgba(28, 30, 29, 0.82), rgba(28, 30, 29, 0.25) 70%, transparent);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .hero h1 {
+    max-width: 20ch;
+    font-size: clamp(34px, 5vw, 64px);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+  }
+
+  .hero-lead {
+    max-width: 56ch;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.55;
+    color: var(--sand);
+  }
+
+  /* Problem section */
+  .problem-inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(30px, 4vw, 48px);
+  }
+
+  .problem-heading {
+    max-width: 24ch;
+    font-size: clamp(27px, 3.4vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+  }
+
+  .problem-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .problem-card p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .accent-bar {
+    width: 26px;
+    height: 3px;
+    background: var(--green-2);
+  }
+
+  /* Wie ich arbeite */
+  .arbeit-section {
+    background: var(--sand);
+  }
+
+  .arbeit-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: clamp(28px, 5vw, 72px);
+    align-items: start;
+  }
+
+  .arbeit-inner h2 {
+    font-size: clamp(27px, 3.4vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+  }
+
+  .arbeit-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 58ch;
+  }
+
+  .arbeit-text p {
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.6;
+  }
+
+  /* Über mich teaser */
+  .ueber-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+
+  .portrait-placeholder {
+    min-width: 0;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .ueber-text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .ueber-text h2 {
+    font-size: clamp(27px, 3.4vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+  }
+
+  .ueber-text p {
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.6;
+    max-width: 52ch;
+  }
+
+  .closing-line {
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+
+  /* Einstieg */
+  .einstieg-section {
+    background: var(--green);
+    color: var(--paper);
+  }
+
+  .einstieg-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  .einstieg-inner h2 {
+    font-size: clamp(27px, 3.4vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    color: var(--paper);
+  }
+
+  .einstieg-inner p {
+    max-width: 52ch;
+    font-size: clamp(18px, 1.7vw, 23px);
+    line-height: 1.55;
+    color: var(--sand);
+  }
+
+  /* Kontakt CTA */
+  .kontakt-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+
+  .kontakt-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  .kontakt-heading {
+    max-width: 20ch;
+    font-size: clamp(28px, 3.6vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .kontakt-subline {
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .kontakt-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .qr-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 24px;
+    align-items: center;
+    min-width: 0;
+    padding: 24px;
+  }
+
+  .qr-image {
+    width: 124px;
+    height: 124px;
+    border-radius: var(--radius-control);
+    display: block;
+  }
+
+  .qr-text {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 15px;
+    line-height: 1.5;
+    min-width: min(100%, 220px);
+    flex: 1 1 200px;
+  }
+
+  .qr-line {
+    color: var(--ink-soft);
+  }
+
+  .break-anywhere {
+    overflow-wrap: anywhere;
+  }
+</style>

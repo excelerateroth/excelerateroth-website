@@ -1,0 +1,91 @@
+---
+import { nav } from '../content/site';
+
+interface Props {
+  activePage?: 'ueber-mich' | 'offerte' | 'kontakt' | 'none';
+}
+
+const { activePage = 'none' } = Astro.props;
+---
+
+<header class="site-header">
+  <a href="/" class="logo-link">
+    <img src="/logo-excelerate.png" alt="excelerate Roth" class="logo" />
+  </a>
+  <nav class="site-nav">
+    <a href={nav.arbeit.href} class="nav-link">{nav.arbeit.label}</a>
+    <a
+      href={nav.ueberMich.href}
+      class="nav-link"
+      class:list={[{ active: activePage === 'ueber-mich' }]}
+      aria-current={activePage === 'ueber-mich' ? 'page' : undefined}
+    >
+      {nav.ueberMich.label}
+    </a>
+    <a
+      href={nav.offerte.href}
+      class="nav-link"
+      class:list={[{ active: activePage === 'offerte' }]}
+      aria-current={activePage === 'offerte' ? 'page' : undefined}
+    >
+      {nav.offerte.label}
+    </a>
+    <a href={nav.kontakt.href} class="btn btn-primary btn-sm">{nav.kontakt.label}</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 20px;
+    padding: 12px var(--header-padding);
+    background: rgba(242, 239, 234, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-card);
+  }
+
+  .logo-link {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .logo {
+    height: clamp(30px, 4.6vw, 42px);
+    width: auto;
+    display: block;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px clamp(12px, 2vw, 30px);
+    font-size: 15px;
+  }
+
+  .nav-link {
+    color: var(--ink);
+    opacity: 0.75;
+  }
+
+  .nav-link:hover {
+    opacity: 1;
+    color: var(--ink);
+  }
+
+  .nav-link.active {
+    color: var(--green);
+    font-weight: 600;
+    opacity: 1;
+  }
+
+  .nav-link.active:hover {
+    color: var(--green);
+  }
+</style>

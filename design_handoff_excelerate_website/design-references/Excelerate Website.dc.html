@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F2EFEA; color: #1C1E1D; font-family: Aptos, 'Public Sans', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #3D7165; text-decoration: none; }
+  a:hover { color: #1C443C; }
+  h1, h2, h3 { font-family: 'Aptos Display', Aptos, 'Public Sans', Helvetica, Arial, sans-serif; }
+  p { text-wrap: pretty; }
+  ::selection { background: #1C443C; color: #F2EFEA; }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:hidden;">
+
+  <header style="position:sticky; top:0; z-index:40; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; padding:12px clamp(16px,4vw,64px); background:rgba(242,239,234,0.94); backdrop-filter:blur(12px); border-bottom:1px solid rgba(28,68,60,0.14);">
+    <a href="Excelerate Website.dc.html" style="display:block; flex:0 0 auto;"><img src="assets/excelerate-logo.png" alt="excelerate Roth" style="height:clamp(30px,4.6vw,42px); width:auto; display:block;" /></a>
+    <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:10px clamp(12px,2vw,30px); font-size:15px;">
+      <a href="#arbeit" style="color:#1C1E1D; opacity:0.75;">Wie ich arbeite</a>
+      <a href="Excelerate Ueber mich.dc.html" style="color:#1C1E1D; opacity:0.75;">Über mich</a>
+      <a href="Excelerate Angebot.dc.html" style="color:#1C1E1D; opacity:0.75;">Offerte</a>
+      <a href="Excelerate Kontakt.dc.html" style="display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:4px; background:#1C443C; color:#F2EFEA; font-weight:600; font-size:16px;" style-hover="background:#123029;">Gespräch vereinbaren →</a>
+    </nav>
+  </header>
+
+  <section style="position:relative; min-height:clamp(460px,74vh,760px); display:flex; align-items:flex-end; background:#1C443C; background-image:repeating-linear-gradient(115deg, rgba(222,216,207,0.07) 0 18px, transparent 18px 36px); overflow:hidden;">
+    <span style="position:absolute; top:20px; right:24px; font-family:ui-monospace,'SF Mono',Consolas,monospace; font-size:12px; color:#B7AA9A; background:rgba(28,30,29,0.45); padding:7px 12px; border-radius:4px;">Bannerbild: Porträt oder Berglandschaft Ostschweiz</span>
+    <div style="position:relative; width:100%; padding:clamp(48px,8vw,96px) clamp(20px,5vw,64px); background:linear-gradient(to top, rgba(28,30,29,0.82), rgba(28,30,29,0.25) 70%, transparent);">
+      <div style="max-width:1180px; margin:0 auto; display:flex; flex-direction:column; gap:26px;">
+        <h1 style="margin:0; max-width:20ch; font-size:clamp(34px,5vw,64px); line-height:1.06; letter-spacing:-0.02em; font-weight:600; color:#F2EFEA;">Reporting, das nicht jedes Mal neu zusammengesucht werden muss.</h1>
+        <p style="margin:0; max-width:56ch; font-size:clamp(17px,1.5vw,21px); line-height:1.55; color:#DED8CF;">Reporting- und Controlling-Strukturen für Unternehmen, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf die jeweilige Ausgangslage.</p>
+        <div>
+          <a href="Excelerate Kontakt.dc.html" style="display:inline-flex; align-items:center; gap:10px; padding:17px 32px; border-radius:4px; background:#F2EFEA; color:#1C443C; font-weight:600; font-size:18px;" style-hover="background:#DED8CF;">Gespräch vereinbaren →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem" style="padding:clamp(60px,9vw,116px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(30px,4vw,48px);">
+      <h2 style="margin:0; max-width:24ch; font-size:clamp(27px,3.4vw,42px); line-height:1.14; letter-spacing:-0.015em; font-weight:600;">Kommt Ihnen das bekannt vor?</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:clamp(16px,2vw,24px);">
+        <div style="background:#FFFFFF; border:1px solid rgba(28,68,60,0.14); border-radius:6px; padding:30px; display:flex; flex-direction:column; gap:16px;">
+          <span style="width:26px; height:3px; background:#3D7165;"></span>
+          <p style="margin:0; font-size:19px; line-height:1.5;">Zahlen werden von Hand aus verschiedenen Quellen zusammengetragen – im Monatsabschluss genauso wie in jeder Ad-hoc-Auswertung.</p>
+        </div>
+        <div style="background:#FFFFFF; border:1px solid rgba(28,68,60,0.14); border-radius:6px; padding:30px; display:flex; flex-direction:column; gap:16px;">
+          <span style="width:26px; height:3px; background:#3D7165;"></span>
+          <p style="margin:0; font-size:19px; line-height:1.5;">Jede Person im Team erstellt Reports ein bisschen anders – nicht vergleichbar, nicht auf einen Blick lesbar.</p>
+        </div>
+        <div style="background:#FFFFFF; border:1px solid rgba(28,68,60,0.14); border-radius:6px; padding:30px; display:flex; flex-direction:column; gap:16px;">
+          <span style="width:26px; height:3px; background:#3D7165;"></span>
+          <p style="margin:0; font-size:19px; line-height:1.5;">Bis die Zahlen fertig aufbereitet sind, sind sie schon wieder veraltet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="arbeit" style="background:#DED8CF; padding:clamp(60px,9vw,116px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(28px,5vw,72px); align-items:start;">
+      <h2 style="margin:0; font-size:clamp(27px,3.4vw,42px); line-height:1.14; letter-spacing:-0.015em; font-weight:600;">Wie ich arbeite</h2>
+      <div style="display:flex; flex-direction:column; gap:24px; max-width:58ch;">
+        <p style="margin:0; font-size:clamp(17px,1.5vw,20px); line-height:1.6;">Je nach Ausgangslage entsteht ein Power-BI-Dashboard, eine strukturierte Excel-Lösung oder eine automatisierte Schnittstelle zwischen bestehenden Systemen – das Werkzeug folgt dem Problem, nicht umgekehrt.</p>
+        <p style="margin:0; font-size:clamp(17px,1.5vw,20px); line-height:1.6;">Die entstehende Struktur bleibt im Unternehmen: verstanden, gepflegt und weitergeführt vom Team – auch nach Abschluss des Projekts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber" style="padding:clamp(60px,9vw,116px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(28px,5vw,64px); align-items:center;">
+      <div style="min-width:0; border-radius:6px; overflow:hidden; background:#DED8CF; border:1px solid rgba(28,68,60,0.14); aspect-ratio:4/5; display:flex; align-items:flex-end; padding:20px; background-image:repeating-linear-gradient(115deg, rgba(28,68,60,0.07) 0 10px, transparent 10px 20px);">
+        <span style="font-family:ui-monospace,'SF Mono',Consolas,monospace; font-size:12px; color:#3F4643; background:#F2EFEA; padding:8px 12px; border-radius:4px;">Porträtfoto</span>
+      </div>
+      <div style="min-width:0; display:flex; flex-direction:column; gap:22px;">
+        <h2 style="margin:0; font-size:clamp(27px,3.4vw,42px); line-height:1.14; letter-spacing:-0.015em; font-weight:600;">Über mich</h2>
+        <p style="margin:0; font-size:clamp(17px,1.5vw,20px); line-height:1.6; max-width:52ch;">Diese Herangehensweise stammt aus mehrjähriger Praxis im Unternehmenscontrolling und im Aufbau von BI-Strukturen für produzierende Unternehmen.</p>
+        <p style="margin:0; font-size:17px; line-height:1.6; color:#3F4643; max-width:52ch;">Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.</p>
+        <div>
+          <a href="Excelerate Ueber mich.dc.html" style="display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:4px; border:1px solid rgba(28,68,60,0.3); color:#1C443C; font-weight:600; font-size:17px;" style-hover="border-color:#1C443C; background:rgba(28,68,60,0.06);">Mehr über mich →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="einstieg" style="background:#1C443C; color:#F2EFEA; padding:clamp(60px,9vw,116px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px; margin:0 auto; display:flex; flex-direction:column; gap:28px; align-items:flex-start;">
+      <h2 style="margin:0; font-size:clamp(27px,3.4vw,42px); line-height:1.14; letter-spacing:-0.015em; font-weight:600;">Der Einstieg</h2>
+      <p style="margin:0; max-width:52ch; font-size:clamp(18px,1.7vw,23px); line-height:1.55; color:#DED8CF;">Der Einstieg: eine kurze Nachricht – danach besprechen wir gemeinsam Ihre Situation und das Vorgehen, und Sie erhalten eine Offerte.</p>
+      <a href="Excelerate Angebot.dc.html" style="display:inline-flex; align-items:center; gap:10px; padding:16px 30px; border-radius:4px; border:1px solid rgba(242,239,234,0.4); color:#F2EFEA; font-weight:600; font-size:17px;" style-hover="background:rgba(242,239,234,0.1); border-color:#F2EFEA;">Meine Offerte ansehen →</a>
+    </div>
+  </section>
+
+  <section id="kontakt" style="padding:clamp(60px,9vw,116px) clamp(20px,5vw,64px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(28px,5vw,64px); align-items:center;">
+      <div style="display:flex; flex-direction:column; gap:24px; min-width:0;">
+        <h2 style="margin:0; font-size:clamp(28px,3.6vw,46px); line-height:1.1; letter-spacing:-0.02em; font-weight:600; max-width:20ch;">Reden wir über Ihre Zahlen – der erste Schritt ist unverbindlich.</h2>
+        <p style="margin:0; font-size:clamp(17px,1.5vw,20px); line-height:1.55; color:#3F4643;">Ich melde mich innerhalb von 2 Werktagen.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px;">
+          <a href="https://wa.me/41765311610" style="display:inline-flex; align-items:center; gap:10px; padding:17px 32px; border-radius:4px; background:#1C443C; color:#F2EFEA; font-weight:600; font-size:18px;" style-hover="background:#123029;">Gespräch vereinbaren →</a>
+          <a href="mailto:jennifer.roth@excelerateroth.ch" style="display:inline-flex; align-items:center; padding:17px 28px; border-radius:4px; border:1px solid rgba(28,68,60,0.3); color:#1C443C; font-weight:600; font-size:18px;" style-hover="border-color:#1C443C; background:rgba(28,68,60,0.06);">E-Mail schreiben</a>
+        </div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:20px 24px; align-items:center; min-width:0; background:#FFFFFF; border:1px solid rgba(28,68,60,0.14); border-radius:6px; padding:24px;">
+        <img src="assets/qr-vcard-transparent.png" alt="vCard QR-Code" style="width:124px; height:124px; border-radius:4px; display:block;" />
+        <div style="display:flex; flex-direction:column; gap:7px; font-size:15px; line-height:1.5; min-width:min(100%,220px); flex:1 1 200px;">
+          <span style="color:#3F4643;">Kontakt direkt speichern</span>
+          <a href="https://wa.me/41765311610">WhatsApp +41 76 531 16 10</a>
+          <a href="mailto:jennifer.roth@excelerateroth.ch" style="overflow-wrap:anywhere;">jennifer.roth@excelerateroth.ch</a>
+          <a href="https://linkedin.com/in/jennifer-roth-excelerate">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#1C1E1D; color:#DED8CF; padding:40px clamp(20px,5vw,64px); display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+    <img src="assets/excelerate-logo.png" alt="excelerate Roth" style="height:34px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.9;" />
+    <span style="font-size:15px;">Im Einsatz in der ganzen DACH-Region – vor Ort oder online.</span>
+    <div style="display:flex; flex-wrap:wrap; gap:22px; font-size:14px; color:#8C867D;">
+      <a href="#" style="color:#8C867D;">Impressum</a>
+      <a href="#" style="color:#8C867D;">Datenschutz</a>
+      <span>© 2026 excelerate Roth</span>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
