@@ -128,8 +128,7 @@ verbunden. Du wolltest dafür **Formspree** nutzen (kostenlos für den Einstieg)
    Ersetze `YOUR_FORM_ID` durch deine eigene ID.
 4. Speichern — fertig. Nachrichten aus dem Formular landen ab sofort in deinem E-Mail-Postfach.
 
-Wenn du diesen Schritt lieber mit mir zusammen machst, sag einfach Bescheid, sobald du das
-Formspree-Konto erstellt hast.
+**Status:** ✅ Bereits erledigt — deine Formular-ID ist eingetragen.
 
 ---
 
@@ -148,30 +147,50 @@ veröffentlicht wird.
 5. Auf „Create repository" klicken. GitHub zeigt dir danach eine Adresse wie
    `https://github.com/dein-name/excelerate-roth-website.git` — die kopierst du.
 
-Sag mir danach einfach die Adresse (oder nur den gewählten Namen), dann verbinde ich dein lokales
-Projekt damit und lade es hoch.
+**Status:** ✅ Bereits erledigt — Repository `excelerateroth/excelerateroth-website`, öffentlich,
+GitHub Pages ist aktiv (Quelle: GitHub Actions).
 
-**GitHub Pages aktivieren** (einmalig, nachdem der Code hochgeladen ist):
-1. Im Repository auf **„Settings"** → **„Pages"**.
-2. Bei **„Source"** die Option **„GitHub Actions"** auswählen.
-3. Ab dem nächsten Hochladen baut GitHub die Seite automatisch und veröffentlicht sie.
+Provisorischer Link (ohne eigene Domain, sieht unformatiert aus — dazu gleich mehr):
+`https://excelerateroth.github.io/excelerateroth-website/`
+
+**Wieso sieht der Link oben unformatiert aus?** Die Website ist so eingerichtet, dass sie unter
+deiner eigenen Domain (`www.excelerateroth.ch`) ausgeliefert wird — dafür müssen Bilder/Stile
+absolute Pfade ab der „Wurzel" verwenden. Der `github.io`-Link liegt aber in einem Unterordner
+(`/excelerateroth-website/`), wodurch diese Pfade dort ins Leere laufen. Das ist normal und kein
+Fehler — sobald deine Domain eingerichtet ist (Schritt 8), sieht die Seite dort korrekt aus.
+Niemand wird den `github.io`-Link normalerweise benutzen.
 
 ---
 
 ## 8. Eigene Domain einrichten
 
-Ich habe vorläufig `www.excelerateroth.ch` in den Projektdateien eingetragen (in
-`astro.config.mjs` und `public/CNAME`), weil das zu deiner E-Mail-Adresse passt. Falls das nicht
-die richtige Domain ist, sag mir die richtige und ich passe es an.
+`www.excelerateroth.ch` ist bereits eingetragen (in `astro.config.mjs`, `public/CNAME` und in den
+GitHub-Pages-Einstellungen). Was jetzt noch fehlt, ist die Verknüpfung bei deinem
+Domain-Anbieter — das kann ich nicht für dich erledigen, da ich keinen Zugriff auf dein
+Domain-Konto habe (und auch nicht haben sollte).
 
-Sobald du die Domain bei einem Anbieter (z. B. Switch, Hostpoint, Infomaniak) registriert hast:
-1. Beim Domain-Anbieter einen **CNAME-Eintrag** für `www` anlegen, der auf
-   `dein-github-name.github.io` zeigt.
-2. Im GitHub-Repository unter **Settings → Pages** die Domain eintragen (dort auch ein Häkchen
-   bei „Enforce HTTPS" setzen, sobald verfügbar).
+**Das musst du bei deinem Domain-Anbieter tun** (z. B. Switch, Hostpoint, Infomaniak — wo auch
+immer `excelerateroth.ch` registriert ist):
 
-Auch hier gilt: Wenn du möchtest, führe ich dich Schritt für Schritt durch, sobald du bei deinem
-Domain-Anbieter eingeloggt bist.
+1. Ins DNS-Verwaltungsmenü der Domain gehen (oft „DNS-Zone", „DNS-Einstellungen" oder ähnlich).
+2. Einen neuen **CNAME-Eintrag** anlegen:
+   - **Name/Host:** `www`
+   - **Ziel/Wert:** `excelerateroth.github.io`
+   - TTL: Standardwert lassen
+3. Falls die Seite auch ohne `www` erreichbar sein soll (`excelerateroth.ch`), zusätzlich vier
+   **A-Einträge** für den Hauptdomain-Namen (`@` oder leer lassen) auf diese vier Adressen:
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+4. Speichern. Die Änderung kann bis zu 24 Stunden dauern (meist geht es schneller).
+5. Sobald es funktioniert: bei GitHub unter **Settings → Pages** erscheint ein grünes Häkchen bei
+   der Domain, und du kannst dort „Enforce HTTPS" aktivieren (für das Schloss-Symbol im Browser).
+
+Schick mir einfach den Namen deines Domain-Anbieters, dann sage ich dir genau, wo du in dessen
+Oberfläche klicken musst.
 
 ---
 
