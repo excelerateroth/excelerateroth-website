@@ -29,11 +29,11 @@ export const home = {
   meta: {
     title: 'Reporting and Controlling Structures | excelerate Roth',
     description:
-      'Reporting and controlling structures for companies that work with their numbers – built in Power BI or a clearly structured Excel solution, tailored to your starting point.',
+      "Reporting and controlling structures for companies that actually use their numbers – built in Power BI or a clean, structured Excel solution, tailored to where you're starting from.",
   },
   hero: {
-    heading: "Reporting that doesn't need to be pieced together from scratch every time.",
-    lead: 'Reporting and controlling structures for companies that work with their numbers – built in Power BI or a clearly structured Excel solution, tailored to your starting point.',
+    heading: "Reporting you don't have to rebuild from scratch every time.",
+    lead: "Reporting and controlling structures for companies that actually use their numbers – built in Power BI or a clean, structured Excel solution, tailored to where you're starting from.",
     ctaLabel: 'Book a call →',
     ctaHref: '/en/contact',
     placeholderLabel: 'Banner image: portrait or Eastern Switzerland landscape',
@@ -41,22 +41,22 @@ export const home = {
   problem: {
     heading: 'Does this sound familiar?',
     items: [
-      'Figures are gathered by hand from different sources – for the monthly close just as much as for any ad hoc analysis.',
-      "Everyone on the team builds reports a little differently – not comparable, not readable at a glance.",
-      "By the time the figures are ready, they're already outdated again.",
+      'Figures get pulled together by hand from different sources – for the monthly close just as much as for any ad hoc question.',
+      'Everyone on the team builds reports a little differently – nothing is comparable, nothing readable at a glance.',
+      "By the time the numbers are ready, they're already out of date.",
     ],
   },
   arbeit: {
     heading: 'How I work',
     paragraphs: [
-      'Depending on the starting point, the result is a Power BI dashboard, a structured Excel solution, or an automated interface between existing systems – the tool follows the problem, not the other way around.',
+      'Depending on where you start, the result is a Power BI dashboard, a structured Excel solution, or an automated interface between your existing systems – the tool follows the problem, not the other way around.',
       'The resulting structure stays with the company: understood, maintained, and carried forward by the team – even after the project ends.',
     ],
   },
   ueberMichTeaser: {
     heading: 'About me',
     paragraph:
-      'This approach comes from several years of hands-on experience in corporate controlling and building BI structures for manufacturing companies.',
+      'This approach is grounded in several years of hands-on experience in corporate controlling and building BI structures for manufacturing companies.',
     closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
     ctaLabel: 'More about me →',
     ctaHref: '/en/about',
@@ -65,12 +65,12 @@ export const home = {
   einstieg: {
     heading: 'Getting started',
     paragraph:
-      "Getting started: a short message – then we'll discuss your situation and the approach together, and you'll receive a proposal.",
-    ctaLabel: 'View my proposal →',
+      "Send a short message – we'll talk through your situation and the right approach together, and you'll get a proposal.",
+    ctaLabel: 'Get in touch →',
     ctaHref: '/en/proposal',
   },
   kontaktCta: {
-    heading: "Let's talk about your numbers – the first step comes with no obligation.",
+    heading: "Let's talk about your numbers – the first conversation is free, no obligation.",
     subline: "I'll get back to you within 2 business days.",
     primaryLabel: 'Book a call →',
     secondaryLabel: 'Send an email',
@@ -88,14 +88,13 @@ export const ueberMich = {
   lead: 'Business sparring partner for reporting, controlling, and BI structures in companies.',
   placeholderLabel: 'Portrait photo',
   paragraphs: [
-    'Before going self-employed, I spent several years as a business sparring partner in corporate controlling at an internationally active industrial company.',
-    'I co-managed the monthly close and prepared the related management report, along with analyzing key figures and facilitating the planning and budget process for the entire business unit.',
-    'As part of international SAP rollouts, I set up the controlling structures in customizing and trained staff. I also co-managed the technical integration of a local time-tracking system with internal cost allocation – including automated posting.',
-    'The controlling data model in Power BI was built under my responsibility and later expanded together with a BI developer whom I onboarded and managed. This also included leading a controlling position.',
+    'Before going self-employed, I spent several years as a business partner in corporate controlling at an internationally active industrial company. I co-managed the monthly close, prepared the related management report, analyzed key figures, and facilitated the planning and budgeting process for the entire business unit.',
+    'As part of international SAP rollouts, I configured the controlling structures in SAP customizing and trained local staff. I also co-managed the technical integration of a local time-tracking system with internal cost allocation, including automated postings.',
+    'The controlling data model in Power BI was built under my responsibility, and later expanded together with a BI developer whom I onboarded and managed. I also had line management responsibility for a controlling position within the team.',
   ],
   closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
   cta: {
-    heading: "Let's talk about your numbers – the first step comes with no obligation.",
+    heading: "Let's talk about your numbers – the first conversation is free, no obligation.",
     ctaLabel: 'Book a call →',
     ctaHref: '/en/contact',
   },
@@ -111,7 +110,7 @@ export const offerte = {
   lead: "Together we'll discuss your situation and possible approach – afterward, you'll receive a proposal.",
   kostenlos: {
     eyebrow: 'Free',
-    heading: 'It starts with a no-obligation initial conversation',
+    heading: 'A no-obligation initial conversation is the first step.',
     text: "Message or call me. In the initial conversation, we'll clarify your needs and expectations. Based on that, you'll receive a proposal to get started. The conversation and the proposal are both free.",
     ctaLabel: 'Book a call →',
     ctaHref: '/en/contact',
@@ -121,7 +120,7 @@ export const offerte = {
     eyebrow: 'Getting started',
     heading: 'Analysis and recommendation',
     intro:
-      "After the free conversation comes the actual start in three steps. At the end, you'll receive a recommendation – with no obligation. You then decide whether you'd like to implement it and whether we'll continue working together on it.",
+      "After the free conversation, the getting-started phase begins in three steps. At the end, you'll receive a recommendation – with no obligation. You then decide whether to implement it, and whether to continue working with me on it.",
     steps: [
       {
         duration: 'approx. 1 hr',
@@ -143,7 +142,7 @@ export const offerte = {
       },
     ],
     paragraphs: [
-      "If your situation calls for more time, we'll plan for that accordingly – the effort is based on what's actually needed and is clearly stated in the proposal.",
+      "If your situation calls for more time, we'll plan for that accordingly – actual effort is based on what's needed and stated clearly in the proposal.",
       "The recommendation marks the end of the getting-started phase. You're under no obligation – if you'd like to implement it, it becomes its own project.",
     ],
   },
@@ -153,11 +152,11 @@ export const offerte = {
     eyebrow: 'Implementation',
     heading: 'Projects',
     intro:
-      "If you decide to move forward, implementation follows as its own project – with its own goal, its own scope, and its own proposal.",
+      "If you decide to move forward, implementation follows as its own project – with its own goal, its own scope, and its own project proposal.",
     cards: [
       {
         title: 'Each project commissioned individually',
-        text: "Scope, goal, and outcome are documented in writing beforehand. What's included and what isn't is defined from the start.",
+        text: "Scope, goal, and outcome are documented in writing beforehand. What's included and what isn't is defined upfront.",
       },
       {
         title: 'Independent execution',
@@ -165,11 +164,11 @@ export const offerte = {
       },
       {
         title: 'No fixed role',
-        text: 'No fixed role within the company is taken on – the collaboration remains project-based. Billing is based on the effort per project.',
+        text: "I don't take on a fixed role within the company – the collaboration stays project-based. Billing is based on the effort per project.",
       },
     ],
     outro:
-      'In terms of content, this ranges from individual BI or Excel projects to controlling analyses to building a full reporting structure. If a further initiative follows later, it is agreed upon again as its own separate project.',
+      'Project types range from individual BI or Excel work, to controlling analyses, to building a full reporting structure. Any follow-up work is agreed on again as its own separate project.',
   },
   schulung: {
     heading: 'Training your team',
