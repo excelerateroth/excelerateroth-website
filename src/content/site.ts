@@ -80,7 +80,7 @@ export const ueberMich = {
   meta: {
     title: 'Über mich | excelerate Roth',
     description:
-      'Betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen in Unternehmen.',
+      'Betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen in Schweizer Unternehmen.',
   },
   eyebrow: 'Über mich',
   heading: 'Jennifer Roth',

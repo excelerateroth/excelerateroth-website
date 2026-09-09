@@ -1,6 +1,11 @@
 ---
+import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { home, contactInfo } from '../../content/site.en';
+import heroPhoto from '../../assets/images/hero.jpg';
+import portraitPhoto from '../../assets/images/portrait.jpg';
+
+const optimizedHero = await getImage({ src: heroPhoto, format: 'webp', width: 2400 });
 ---
 
 <BaseLayout
@@ -10,7 +15,7 @@ import { home, contactInfo } from '../../content/site.en';
   lang="en"
   langSwitchHref="/"
 >
-  <section class="hero">
+  <section class="hero" style={`background-image: url(${optimizedHero.src})`}>
     <div class="hero-inner">
       <div class="container hero-content">
         <h1>{home.hero.heading}</h1>
@@ -49,7 +54,9 @@ import { home, contactInfo } from '../../content/site.en';
 
   <section class="section-lg">
     <div class="container ueber-inner">
-      <div class="placeholder portrait-placeholder"></div>
+      <div class="portrait-frame">
+        <Image src={portraitPhoto} alt="Portrait of Jennifer Roth" class="portrait-photo" width={700} loading="lazy" />
+      </div>
       <div class="ueber-text">
         <h2>{home.ueberMichTeaser.heading}</h2>
         <p>{home.ueberMichTeaser.paragraph}</p>
@@ -103,8 +110,9 @@ import { home, contactInfo } from '../../content/site.en';
     min-height: clamp(460px, 74vh, 760px);
     display: flex;
     align-items: flex-end;
-    background: var(--green);
-    background-image: repeating-linear-gradient(115deg, rgba(222, 216, 207, 0.07) 0 18px, transparent 18px 36px);
+    background-color: var(--green);
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
   }
 
@@ -206,13 +214,18 @@ import { home, contactInfo } from '../../content/site.en';
     align-items: center;
   }
 
-  .portrait-placeholder {
+  .portrait-frame {
     min-width: 0;
     border-radius: var(--radius-card);
     overflow: hidden;
     aspect-ratio: 4 / 5;
-    align-items: flex-end;
-    padding: 20px;
+  }
+
+  .portrait-frame :global(.portrait-photo) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .ueber-text {

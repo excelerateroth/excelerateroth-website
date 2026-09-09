@@ -9,7 +9,7 @@ export const nav = {
 };
 
 export const footer = {
-  tagline: 'Active across the DACH region',
+  tagline: 'Active for companies in Switzerland – and across the DACH region.',
   impressum: { label: 'Imprint', href: '/en/imprint' },
   datenschutz: { label: 'Privacy Policy', href: '/en/privacy' },
   copyright: '© 2026 excelerate Roth',
@@ -27,9 +27,9 @@ export const contactInfo = {
 
 export const home = {
   meta: {
-    title: 'Reporting and Controlling Structures | excelerate Roth',
+    title: 'Reporting & Controlling for Swiss SMEs | excelerate Roth',
     description:
-      "Reporting and controlling structures for companies that actually use their numbers – built in Power BI or a clean, structured Excel solution, tailored to where you're starting from.",
+      'Reporting and controlling structures for Swiss SMEs that actually use their numbers – built in Power BI or a clean, structured Excel solution.',
   },
   hero: {
     heading: "Reporting you don't have to rebuild from scratch every time.",
