@@ -18,6 +18,43 @@ const t = lang === 'en' ? en : de;
 const homeHref = lang === 'en' ? '/en/' : '/';
 const htmlLang = lang === 'en' ? 'en' : 'de-CH';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Schema.org-Markup (JSON-LD) — identifiziert Unternehmen und Person site-weit,
+// unabhängig von der Sprache der jeweiligen Seite.
+const schemaOrg = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://www.excelerateroth.ch/#business',
+      name: 'excelerate Roth',
+      url: 'https://www.excelerateroth.ch/',
+      email: 'jennifer.roth@excelerateroth.ch',
+      telephone: '+41765311610',
+      description:
+        'Reporting- und Controlling-Strukturen für Schweizer KMU – mit Power BI oder einer klar aufgebauten Excel-Lösung.',
+      areaServed: {
+        '@type': 'Country',
+        name: 'Schweiz',
+      },
+      founder: { '@id': 'https://www.excelerateroth.ch/#jennifer' },
+      sameAs: ['https://www.linkedin.com/in/jennifer-roth-excelerate'],
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://www.excelerateroth.ch/#jennifer',
+      name: 'Jennifer Roth',
+      jobTitle: 'Controlling & BI-Beraterin',
+      url: 'https://www.excelerateroth.ch/ueber-mich/',
+      worksFor: { '@id': 'https://www.excelerateroth.ch/#business' },
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'WINGS Hochschule Wismar',
+      },
+      sameAs: ['https://www.linkedin.com/in/jennifer-roth-excelerate'],
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -33,6 +70,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <link rel="icon" type="image/png" href="/logo-excelerate.png" />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
   </head>
   <body>
     <div class="page">

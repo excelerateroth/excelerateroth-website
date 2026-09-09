@@ -9,7 +9,7 @@ export const nav = {
 };
 
 export const footer = {
-  tagline: 'Im Einsatz für Unternehmen in der Schweiz – und auf Wunsch in der ganzen DACH-Region.',
+  tagline: 'Im Einsatz für Unternehmen in der Schweiz – und in der ganzen DACH-Region.',
   impressum: { label: 'Impressum', href: '/impressum' },
   datenschutz: { label: 'Datenschutz', href: '/datenschutz' },
   copyright: '© 2026 excelerate Roth',
@@ -193,6 +193,7 @@ export const kontakt = {
   whatsapp: {
     eyebrow: 'WhatsApp',
     ctaLabel: 'Nachricht schreiben →',
+    qrCaption: 'Mit dem Handy scannen, um direkt zu chatten.',
   },
   weitereMoeglichkeiten: {
     heading: 'Weitere Möglichkeiten',

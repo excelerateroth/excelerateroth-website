@@ -27,6 +27,10 @@ const FORMSPREE_FORM_ID = 'xwlkrgrr';
           <span class="eyebrow eyebrow-on-dark">{kontakt.whatsapp.eyebrow}</span>
           <span class="whatsapp-number">{contactInfo.whatsappNumber}</span>
           <a href={contactInfo.whatsappHref} class="btn btn-on-dark">{kontakt.whatsapp.ctaLabel}</a>
+          <div class="whatsapp-qr-row">
+            <img src="/whatsapp-qr.png" alt="QR code for the WhatsApp chat" class="whatsapp-qr-image" />
+            <span class="whatsapp-qr-text">{kontakt.whatsapp.qrCaption}</span>
+          </div>
         </div>
 
         <div class="card options-card">
@@ -162,6 +166,32 @@ const FORMSPREE_FORM_ID = 'xwlkrgrr';
     align-self: flex-start;
     font-size: 17px;
     padding: 15px 28px;
+  }
+
+  .whatsapp-qr-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    padding-top: 16px;
+    margin-top: auto;
+    border-top: 1px solid rgba(242, 239, 234, 0.2);
+  }
+
+  .whatsapp-qr-image {
+    width: 84px;
+    height: 84px;
+    border-radius: var(--radius-control);
+    display: block;
+    background: var(--paper);
+    padding: 4px;
+  }
+
+  .whatsapp-qr-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--sand);
+    flex: 1 1 140px;
   }
 
   .options-card {

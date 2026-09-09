@@ -191,6 +191,7 @@ export const kontakt = {
   whatsapp: {
     eyebrow: 'WhatsApp',
     ctaLabel: 'Send a message →',
+    qrCaption: 'Scan with your phone to start chatting.',
   },
   weitereMoeglichkeiten: {
     heading: 'Other ways to reach me',
