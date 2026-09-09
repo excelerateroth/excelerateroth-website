@@ -9,7 +9,7 @@ export const nav = {
 };
 
 export const footer = {
-  tagline: 'Im Einsatz in der ganzen DACH-Region',
+  tagline: 'Im Einsatz für Unternehmen in der Schweiz – und auf Wunsch in der ganzen DACH-Region.',
   impressum: { label: 'Impressum', href: '/impressum' },
   datenschutz: { label: 'Datenschutz', href: '/datenschutz' },
   copyright: '© 2026 excelerate Roth',
@@ -27,13 +27,13 @@ export const contactInfo = {
 
 export const home = {
   meta: {
-    title: 'Reporting- und Controlling-Strukturen | excelerate Roth',
+    title: 'Reporting & Controlling für KMU Schweiz | excelerate Roth',
     description:
-      'Reporting- und Controlling-Strukturen für Unternehmen, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf die jeweilige Ausgangslage.',
+      'Reporting- und Controlling-Strukturen für Schweizer KMU, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung.',
   },
   hero: {
     heading: 'Reporting, das nicht jedes Mal neu zusammengesucht werden muss.',
-    lead: 'Reporting- und Controlling-Strukturen für Unternehmen, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf die jeweilige Ausgangslage.',
+    lead: 'Reporting- und Controlling-Strukturen für Unternehmen in der Schweiz, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf die jeweilige Ausgangslage.',
     ctaLabel: 'Gespräch vereinbaren →',
     ctaHref: '/kontakt',
   },
@@ -84,7 +84,7 @@ export const ueberMich = {
   },
   eyebrow: 'Über mich',
   heading: 'Jennifer Roth',
-  lead: 'Betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen in Unternehmen.',
+  lead: 'Jennifer Roth ist betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen – für Unternehmen in der Schweiz.',
   paragraphs: [
     'Bevor ich mich selbständig gemacht habe, habe ich mehrere Jahre als betriebswirtschaftliche Sparringpartnerin im Unternehmenscontrolling eines international tätigen Industrieunternehmens gearbeitet.',
     'Ich habe den Monatsabschluss mitverantwortet und den dazugehörigen Managementbericht erstellt. Dazu kamen die Analyse der zentralen Kennzahlen und die Moderation des Planungs- und Budgetprozesses für den gesamten Unternehmensbereich.',
@@ -185,7 +185,7 @@ export const kontakt = {
   meta: {
     title: 'Kontakt | excelerate Roth',
     description:
-      'Ebenso können Sie das Formular unten nutzen oder mich anrufen. Ihre Anfrage geht direkt an mich, nicht an ein Team oder eine Warteschlange – ich melde mich innerhalb von 2 Werktagen.',
+      'Kontakt für Reporting- und Controlling-Beratung in der Schweiz. Direkte Anfrage per WhatsApp, Telefon oder Formular – Antwort innert 2 Werktagen.',
   },
   eyebrow: 'Kontakt',
   heading: 'Am schnellsten erreichen Sie mich per WhatsApp.',

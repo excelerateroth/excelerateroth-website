@@ -78,8 +78,8 @@ export const home = {
 
 export const ueberMich = {
   meta: {
-    title: 'About | excelerate Roth',
-    description: 'Business sparring partner for reporting, controlling, and BI structures in companies.',
+    title: 'Jennifer Roth – Controlling & BI, Switzerland | excelerate Roth',
+    description: 'Business sparring partner for reporting, controlling, and BI structures in Swiss companies.',
   },
   eyebrow: 'About',
   heading: 'Jennifer Roth',
@@ -99,8 +99,9 @@ export const ueberMich = {
 
 export const offerte = {
   meta: {
-    title: 'Proposal | excelerate Roth',
-    description: "Together we'll discuss your situation and possible approach – afterward, you'll receive a proposal.",
+    title: 'Proposal – Controlling & BI, Switzerland | excelerate Roth',
+    description:
+      "Together we'll discuss your situation and the possible approach for your Swiss company – afterward, you'll receive a proposal.",
   },
   eyebrow: 'Proposal',
   heading: 'The simplest first step is a short message.',
@@ -180,9 +181,9 @@ export const offerte = {
 
 export const kontakt = {
   meta: {
-    title: 'Contact | excelerate Roth',
+    title: 'Contact – Controlling & BI, Switzerland | excelerate Roth',
     description:
-      "You can also use the form below or give me a call. Your message goes directly to me, not to a team or a queue – I'll get back to you within 2 business days.",
+      'Contact me for reporting and controlling consulting in Switzerland. Reach me directly via WhatsApp, phone, or the form below – I reply within 2 business days.',
   },
   eyebrow: 'Contact',
   heading: 'The fastest way to reach me is via WhatsApp.',
