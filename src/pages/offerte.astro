@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import Icon from '../components/Icon.astro';
 import { offerte } from '../content/site';
 ---
 
@@ -16,6 +17,20 @@ import { offerte } from '../content/site';
       <span class="eyebrow">{offerte.eyebrow}</span>
       <h1>{offerte.heading}</h1>
       <p class="lead">{offerte.lead}</p>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container process-grid">
+      {
+        offerte.processOverview.map((step) => (
+          <div class="process-step">
+            <Icon name={step.icon} class="process-step-icon" />
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -142,6 +157,39 @@ import { offerte } from '../content/site';
   }
 
   /* Kostenlos */
+  .process-section {
+    padding: 0 var(--page-padding) clamp(40px, 6vw, 72px);
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: clamp(20px, 3vw, 32px);
+  }
+
+  .process-step {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .process-step :global(.process-step-icon) {
+    width: 26px;
+    height: 26px;
+    color: var(--green-2);
+  }
+
+  .process-step h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .process-step p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
   .kostenlos-section {
     padding: 0 var(--page-padding) clamp(48px, 7vw, 88px);
   }

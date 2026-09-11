@@ -47,15 +47,26 @@ export const home = {
   },
   arbeit: {
     heading: 'Wie ich arbeite',
-    paragraphs: [
-      'Je nach Ausgangslage entsteht ein Power-BI-Dashboard, eine strukturierte Excel-Lösung oder eine automatisierte Schnittstelle zwischen bestehenden Systemen – das Werkzeug folgt dem Problem, nicht umgekehrt.',
-      'Die entstehende Struktur bleibt im Unternehmen: verstanden, gepflegt und weitergeführt vom Team – auch nach Abschluss des Projekts.',
+    intro:
+      'Das Werkzeug folgt dem Problem – nicht umgekehrt: Power-BI-Dashboard, strukturierte Excel-Lösung oder automatisierte Schnittstelle.',
+    resultsHeading: 'Das Ergebnis für Sie:',
+    results: [
+      { icon: 'zap', text: 'Zahlen auf Knopfdruck statt Stunden manueller Zusammenstellung' },
+      {
+        icon: 'layers',
+        text: 'Ein einheitliches Reporting im ganzen Team – auf einen Blick vergleichbar',
+      },
+      { icon: 'compass', text: 'Schnellere, sichere Entscheidungen, weil die Datenbasis stimmt' },
+      {
+        icon: 'users',
+        text: 'Die Struktur bleibt im Unternehmen: verstanden, gepflegt und weitergeführt vom Team – auch nach Projektende',
+      },
     ],
   },
   ueberMichTeaser: {
     heading: 'Über mich',
     paragraph:
-      'Diese Herangehensweise stammt aus mehrjähriger Praxis im Unternehmenscontrolling und im Aufbau von BI-Strukturen für produzierende Unternehmen.',
+      'Mehrjährige Praxis im Unternehmenscontrolling und im Aufbau von BI-Strukturen für produzierende Unternehmen.',
     closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
     ctaLabel: 'Mehr über mich →',
     ctaHref: '/ueber-mich',
@@ -85,12 +96,30 @@ export const ueberMich = {
   eyebrow: 'Über mich',
   heading: 'Jennifer Roth',
   lead: 'Jennifer Roth ist betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen – für Unternehmen in der Schweiz.',
-  paragraphs: [
-    'Bevor ich mich selbständig gemacht habe, habe ich mehrere Jahre als betriebswirtschaftliche Sparringpartnerin im Unternehmenscontrolling eines international tätigen Industrieunternehmens gearbeitet.',
-    'Ich habe den Monatsabschluss mitverantwortet und den dazugehörigen Managementbericht erstellt. Dazu kamen die Analyse der zentralen Kennzahlen und die Moderation des Planungs- und Budgetprozesses für den gesamten Unternehmensbereich.',
-    'Im Rahmen internationaler SAP-Rollouts habe ich die Controlling-Strukturen im Customizing aufgesetzt und Mitarbeitende geschult. Ebenso habe ich die technische Anbindung eines lokalen Zeiterfassungssystems an die interne Leistungsverrechnung mitverantwortet – inklusive automatisierter Verbuchung.',
-    'Das Controlling-Datenmodell in Power BI ist unter meiner Verantwortung entstanden und wurde später gemeinsam mit einem BI-Entwickler weiter ausgebaut, den ich eingearbeitet und geführt habe. Dazu kam die Führung einer Controlling-Stelle.',
-  ],
+  motivation: {
+    heading: 'Mein Antrieb',
+    text: 'Zahlenverständnis und Technologie gehören für mich zusammen. Schon in meiner Festanstellung habe ich genau darauf hingearbeitet – Strukturen automatisiert statt nur ausgewertet. Selbständig gemacht habe ich mich, um mich noch stärker darauf zu konzentrieren.',
+  },
+  praxis: {
+    heading: 'Meine Praxis',
+    intro:
+      'Mehrere Jahre war ich betriebswirtschaftliche Sparringpartnerin im Unternehmenscontrolling eines international tätigen Industrieunternehmens.',
+    items: [
+      'Monatsabschluss und Managementbericht mitverantwortet',
+      'Kennzahlenanalyse und Moderation des Planungs- und Budgetprozesses für den gesamten Unternehmensbereich',
+      'Controlling-Strukturen im Customizing internationaler SAP-Rollouts aufgesetzt, Mitarbeitende geschult',
+      'Anbindung eines Zeiterfassungssystems an die interne Leistungsverrechnung – inklusive automatisierter Verbuchung',
+      'Unternehmensweite Datenmodelle in Power BI aufgebaut – für unterschiedlichste Unternehmensbereiche – sowie einen BI-Entwickler eingearbeitet und geführt',
+      'Führung einer Controlling-Stelle',
+    ],
+  },
+  wirkung: {
+    heading: 'Was das bewirkt hat',
+    paragraphs: [
+      'Abschlüsse und Reports liefen spürbar schneller. Die Strukturen waren so aufgebaut, dass das Team sie eigenständig weiterführen konnte.',
+      'Genau das ist mein Anspruch an jedes Projekt: Ergebnisse, die bleiben.',
+    ],
+  },
   closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
   cta: {
     heading: 'Reden wir über Ihre Zahlen – der erste Schritt ist unverbindlich.',
@@ -108,42 +137,53 @@ export const offerte = {
   eyebrow: 'Offerte',
   heading: 'Der einfachste erste Schritt ist eine kurze Nachricht.',
   lead: 'Gemeinsam besprechen wir Ihre Situation und das mögliche Vorgehen – im Anschluss erhalten Sie eine Offerte.',
+  processOverview: [
+    { icon: 'message-circle', title: 'Kontakt', text: 'Kostenlos und unverbindlich' },
+    { icon: 'file-text', title: 'Offerte', text: 'Für die Potenzialanalyse' },
+    { icon: 'flag', title: 'Kickoff', text: 'Sie zeigen mir Ihre Landschaft und Ihre Situation' },
+    {
+      icon: 'search',
+      title: 'Analyse',
+      text: 'Ich bereite auf und analysiere, Rückfragen kläre ich direkt mit Ihnen',
+    },
+    { icon: 'lightbulb', title: 'Lösungsvorschlag', text: 'Konkrete Empfehlung' },
+  ],
   kostenlos: {
     eyebrow: 'Kostenlos',
-    heading: 'Am Anfang steht ein unverbindliches Erstgespräch',
-    text: 'Schreiben Sie mir oder rufen Sie an. Im Erstgespräch klären wir Ihr Anliegen und Ihre Vorstellungen. Auf dieser Grundlage erhalten Sie eine Offerte für den Einstieg. Gespräch und Offerte sind kostenlos.',
+    heading: 'Kurzer Kontakt',
+    text: 'Schreiben Sie mir oder rufen Sie an. Ich kläre Ihr Anliegen und schicke Ihnen eine Offerte für die Potenzialanalyse. Kostenlos und unverbindlich.',
     ctaLabel: 'Gespräch vereinbaren →',
     ctaHref: '/kontakt',
     note: 'Antwort innerhalb von 2 Werktagen.',
   },
   einstieg: {
-    eyebrow: 'Der Einstieg',
+    eyebrow: 'Die Potenzialanalyse',
     heading: 'Analyse und Lösungsvorschlag',
     intro:
-      'Nach dem kostenlosen Gespräch folgt der eigentliche Einstieg in drei Schritten. Am Ende steht eine Empfehlung – unverbindlich. Sie entscheiden danach, ob Sie diese umsetzen möchten und ob wir dafür weiter zusammenarbeiten.',
+      'Nach der Offerte folgt die Potenzialanalyse in drei Schritten. Am Ende steht eine konkrete Empfehlung. Sie entscheiden danach, ob Sie diese umsetzen.',
     steps: [
       {
         duration: 'ca. 1 Std.',
-        title: 'Erstes Gespräch',
-        text: 'Sie zeigen mir Ihre aktuelle Situation – bestehende Reports, Prozesse, Herausforderungen.',
+        title: 'Kickoff',
+        text: 'Sie zeigen mir Ihre Landschaft und Ihre Situation: welche Reports heute wie entstehen, wo es hakt, was Sie sich wünschen.',
         highlighted: true,
       },
       {
         duration: 'ca. 3 Std.',
-        title: 'Analysephase',
-        text: 'Teils gemeinsam mit Ihnen, teils in eigenständiger Arbeit meinerseits.',
+        title: 'Analyse',
+        text: 'Auf Basis des Kickoffs bereite ich Ihre Situation auf und analysiere sie. Tauchen dabei Rückfragen auf, kläre ich sie direkt mit Ihnen.',
         highlighted: false,
       },
       {
         duration: 'ca. 1 Std.',
         title: 'Lösungsvorschlag',
-        text: 'Eine konkrete Empfehlung, wie es weitergehen kann – unverbindlich.',
+        text: 'Eine konkrete Empfehlung, wie es weitergehen kann.',
         highlighted: false,
       },
     ],
     paragraphs: [
       'Braucht es aufgrund der Ausgangslage mehr Zeit, planen wir das entsprechend ein – der Aufwand richtet sich nach dem, was tatsächlich gebraucht wird, und wird in der Offerte klar ausgewiesen.',
-      'Mit dem Lösungsvorschlag endet der Einstieg. Sie sind zu nichts verpflichtet – möchten Sie die Empfehlung umsetzen, wird daraus ein eigenes Projekt.',
+      'Mit dem Lösungsvorschlag endet die Potenzialanalyse. Sie sind zu nichts verpflichtet – möchten Sie die Empfehlung umsetzen, wird daraus ein eigenes Projekt.',
     ],
   },
   // Wörtlich zu übernehmen — rechtlich abgestimmte Formulierung (Abgrenzung
@@ -206,7 +246,7 @@ export const kontakt = {
     emailLabel: 'E-Mail',
     emailPlaceholder: 'name@unternehmen.ch',
     messageLabel: 'Worum geht es?',
-    messagePlaceholder: 'Ein paar Sätze zu Ihrer Situation genügen.',
+    messagePlaceholder: 'Ein paar Worte zu Ihrem Unternehmen und Ihrem Interesse an excelerate Roth genügen.',
     submitLabel: 'Nachricht senden',
     note: 'Ich melde mich innerhalb von 2 Werktagen.',
     successMessage: 'Danke für Ihre Nachricht! Ich melde mich innerhalb von 2 Werktagen.',
