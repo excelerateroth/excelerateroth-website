@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import Icon from '../../components/Icon.astro';
 import { offerte } from '../../content/site.en';
 ---
 
@@ -16,6 +17,23 @@ import { offerte } from '../../content/site.en';
       <span class="eyebrow">{offerte.eyebrow}</span>
       <h1>{offerte.heading}</h1>
       <p class="lead">{offerte.lead}</p>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container process-grid">
+      {
+        offerte.processOverview.map((step, i) => (
+          <div class="process-item">
+            {i > 0 && <Icon name="arrow-right" class="process-arrow" />}
+            <div class="process-step">
+              <Icon name={step.icon} class="process-step-icon" />
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -139,6 +157,69 @@ import { offerte } from '../../content/site.en';
     line-height: 1.6;
     color: var(--ink-soft);
     max-width: 70ch;
+  }
+
+  .process-section {
+    padding: 0 var(--page-padding) clamp(40px, 6vw, 72px);
+  }
+
+  .process-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: clamp(16px, 2.5vw, 28px);
+  }
+
+  .process-item {
+    flex: 1 1 150px;
+    min-width: 140px;
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(16px, 2.5vw, 28px);
+  }
+
+  .process-step {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .process-item :global(.process-arrow) {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    color: var(--taupe);
+  }
+
+  @media (max-width: 640px) {
+    .process-item {
+      flex-basis: 100%;
+    }
+
+    .process-grid :global(.process-arrow) {
+      transform: rotate(90deg);
+      margin: -4px 0;
+    }
+  }
+
+  .process-step :global(.process-step-icon) {
+    width: 26px;
+    height: 26px;
+    color: var(--green-2);
+  }
+
+  .process-step h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .process-step p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-soft);
   }
 
   /* Free */

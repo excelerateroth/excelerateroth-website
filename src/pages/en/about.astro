@@ -28,7 +28,24 @@ import portraitPhoto from '../../assets/images/portrait.jpg';
 
   <section class="text-section">
     <div class="text-column">
-      {ueberMich.paragraphs.map((p) => <p>{p}</p>)}
+      <div class="text-block">
+        <h2>{ueberMich.motivation.heading}</h2>
+        <p>{ueberMich.motivation.text}</p>
+      </div>
+
+      <div class="text-block">
+        <h2>{ueberMich.praxis.heading}</h2>
+        <p>{ueberMich.praxis.intro}</p>
+        <ul class="praxis-list">
+          {ueberMich.praxis.items.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="text-block">
+        <h2>{ueberMich.wirkung.heading}</h2>
+        {ueberMich.wirkung.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+
       <p class="closing-line">{ueberMich.closingLine}</p>
     </div>
   </section>
@@ -97,12 +114,34 @@ import portraitPhoto from '../../assets/images/portrait.jpg';
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 40px;
   }
 
   .text-column p {
     font-size: clamp(17px, 1.5vw, 20px);
     line-height: 1.65;
+  }
+
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .text-block h2 {
+    font-size: clamp(20px, 2vw, 24px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .praxis-list {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.55;
   }
 
   .closing-line {

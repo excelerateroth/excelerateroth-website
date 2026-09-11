@@ -29,11 +29,11 @@ export const home = {
   meta: {
     title: 'Reporting & Controlling für KMU Schweiz | excelerate Roth',
     description:
-      'Reporting- und Controlling-Strukturen für Schweizer KMU, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung.',
+      'Reporting- und Controlling-Strukturen für Schweizer KMU – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf Ihre Ausgangslage.',
   },
   hero: {
     heading: 'Reporting, das nicht jedes Mal neu zusammengesucht werden muss.',
-    lead: 'Reporting- und Controlling-Strukturen für Unternehmen in der Schweiz, die mit ihren Zahlen arbeiten – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf die jeweilige Ausgangslage.',
+    lead: 'Reporting- und Controlling-Strukturen für Unternehmen in der Schweiz – mit Power BI oder einer klar aufgebauten Excel-Lösung, abgestimmt auf Ihre Ausgangslage.',
     ctaLabel: 'Gespräch vereinbaren →',
     ctaHref: '/kontakt',
   },
@@ -140,7 +140,11 @@ export const offerte = {
   processOverview: [
     { icon: 'message-circle', title: 'Kontakt', text: 'Kostenlos und unverbindlich' },
     { icon: 'file-text', title: 'Offerte', text: 'Für die Potenzialanalyse' },
-    { icon: 'flag', title: 'Kickoff', text: 'Sie zeigen mir Ihre Landschaft und Ihre Situation' },
+    {
+      icon: 'flag',
+      title: 'Kickoff der Potenzialanalyse',
+      text: 'Sie zeigen mir Ihre Landschaft und Ihre Situation',
+    },
     {
       icon: 'search',
       title: 'Analyse',
@@ -160,7 +164,7 @@ export const offerte = {
     eyebrow: 'Die Potenzialanalyse',
     heading: 'Analyse und Lösungsvorschlag',
     intro:
-      'Nach der Offerte folgt die Potenzialanalyse in drei Schritten. Am Ende steht eine konkrete Empfehlung. Sie entscheiden danach, ob Sie diese umsetzen.',
+      'Nach der Offerte folgt die Potenzialanalyse in drei Schritten, ab CHF 1000. Am Ende steht eine konkrete Empfehlung. Sie entscheiden danach, ob Sie diese umsetzen.',
     steps: [
       {
         duration: 'ca. 1 Std.',
@@ -200,7 +204,7 @@ export const offerte = {
       },
       {
         title: 'Eigenverantwortliche Ausführung',
-        text: 'Die Arbeit erfolgt mit eigener Infrastruktur und in eigener fachlicher Verantwortung.',
+        text: 'Meine Arbeit erfolgt mit eigener Infrastruktur und in eigener fachlicher Verantwortung.',
       },
       {
         title: 'Keine feste Funktion',

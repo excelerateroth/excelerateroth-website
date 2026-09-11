@@ -1,6 +1,7 @@
 ---
 import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
 import { home, contactInfo } from '../../content/site.en';
 import heroPhoto from '../../assets/images/hero.jpg';
 import portraitPhoto from '../../assets/images/portrait.jpg';
@@ -47,7 +48,18 @@ const optimizedHero = await getImage({ src: heroPhoto, format: 'webp', width: 24
     <div class="container arbeit-inner">
       <h2>{home.arbeit.heading}</h2>
       <div class="arbeit-text">
-        {home.arbeit.paragraphs.map((p) => <p>{p}</p>)}
+        <p class="arbeit-intro">{home.arbeit.intro}</p>
+        <p class="arbeit-results-heading">{home.arbeit.resultsHeading}</p>
+        <ul class="arbeit-results">
+          {
+            home.arbeit.results.map((result) => (
+              <li class="arbeit-result">
+                <Icon name={result.icon} class="arbeit-result-icon" />
+                <span>{result.text}</span>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </section>
@@ -204,6 +216,35 @@ const optimizedHero = await getImage({ src: heroPhoto, format: 'webp', width: 24
   .arbeit-text p {
     font-size: clamp(17px, 1.5vw, 20px);
     line-height: 1.6;
+  }
+
+  .arbeit-results-heading {
+    font-weight: 600;
+  }
+
+  .arbeit-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .arbeit-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.5;
+  }
+
+  .arbeit-result :global(.arbeit-result-icon) {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    color: var(--green-2);
   }
 
   /* About teaser */

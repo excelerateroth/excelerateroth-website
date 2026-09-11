@@ -29,11 +29,11 @@ export const home = {
   meta: {
     title: 'Reporting & Controlling for Swiss SMEs | excelerate Roth',
     description:
-      'Reporting and controlling structures for Swiss SMEs that actually use their numbers – built in Power BI or a clean, structured Excel solution.',
+      'Reporting and controlling structures for Swiss SMEs – built in Power BI or a clean, structured Excel solution, tailored to your situation.',
   },
   hero: {
     heading: "Reporting you don't have to rebuild from scratch every time.",
-    lead: "Reporting and controlling structures for companies that actually use their numbers – built in Power BI or a clean, structured Excel solution, tailored to where you're starting from.",
+    lead: 'Reporting and controlling structures for companies in Switzerland – built in Power BI or a clean, structured Excel solution, tailored to your situation.',
     ctaLabel: 'Book a call →',
     ctaHref: '/en/contact',
   },
@@ -47,15 +47,26 @@ export const home = {
   },
   arbeit: {
     heading: 'How I work',
-    paragraphs: [
-      'Depending on where you start, the result is a Power BI dashboard, a structured Excel solution, or an automated interface between your existing systems – the tool follows the problem, not the other way around.',
-      'The resulting structure stays with the company: understood, maintained, and carried forward by the team – even after the project ends.',
+    intro:
+      'The tool follows the problem – not the other way around: a Power BI dashboard, a structured Excel solution, or an automated interface.',
+    resultsHeading: 'The result for you:',
+    results: [
+      { icon: 'zap', text: 'Numbers at the push of a button instead of hours of manual work' },
+      {
+        icon: 'layers',
+        text: 'Consistent reporting across the whole team – comparable at a glance',
+      },
+      { icon: 'compass', text: 'Faster, safer decisions, because the data is right' },
+      {
+        icon: 'users',
+        text: 'The structure stays with the company: understood, maintained, and carried forward by the team – even after the project ends',
+      },
     ],
   },
   ueberMichTeaser: {
     heading: 'About me',
     paragraph:
-      'This approach is grounded in several years of hands-on experience in corporate controlling and building BI structures for manufacturing companies.',
+      'Years of hands-on experience in corporate controlling and building BI structures for manufacturing companies.',
     closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
     ctaLabel: 'More about me →',
     ctaHref: '/en/about',
@@ -83,12 +94,31 @@ export const ueberMich = {
   },
   eyebrow: 'About',
   heading: 'Jennifer Roth',
-  lead: 'Business sparring partner for reporting, controlling, and BI structures in companies.',
-  paragraphs: [
-    'Before going self-employed, I spent several years as a business partner in corporate controlling at an internationally active industrial company. I co-managed the monthly close, prepared the related management report, analyzed key figures, and facilitated the planning and budgeting process for the entire business unit.',
-    'As part of international SAP rollouts, I configured the controlling structures in SAP customizing and trained local staff. I also co-managed the technical integration of a local time-tracking system with internal cost allocation, including automated postings.',
-    'The controlling data model in Power BI was built under my responsibility, and later expanded together with a BI developer whom I onboarded and managed. I also had line management responsibility for a controlling position within the team.',
-  ],
+  lead: 'Jennifer Roth is a business sparring partner for reporting, controlling, and BI structures – for companies in Switzerland.',
+  motivation: {
+    heading: 'What drives me',
+    text: 'Understanding numbers and technology go hand in hand for me. Even in my previous employment, I worked toward exactly that – automating structures instead of just analyzing them. I went self-employed to focus on this even more.',
+  },
+  praxis: {
+    heading: 'My experience',
+    intro:
+      'For several years, I was a business sparring partner in corporate controlling at an internationally active industrial company.',
+    items: [
+      'Co-managed the monthly close and management report',
+      'Analyzed key figures and facilitated the planning and budget process for the entire business unit',
+      'Set up controlling structures in customizing for international SAP rollouts, trained staff',
+      'Integrated a time-tracking system with internal cost allocation – including automated posting',
+      'Built company-wide data models in Power BI – across a wide range of business areas – and onboarded and managed a BI developer',
+      'Managed a controlling position',
+    ],
+  },
+  wirkung: {
+    heading: 'The impact',
+    paragraphs: [
+      'Closes and reports ran noticeably faster. The structures were built so the team could carry them forward independently.',
+      "That's exactly what I aim for in every project: results that last.",
+    ],
+  },
   closingLine: 'Bachelor of Arts in Controlling and Finance, WINGS Hochschule Wismar.',
   cta: {
     heading: "Let's talk about your numbers – the first conversation is free, no obligation.",
@@ -106,42 +136,57 @@ export const offerte = {
   eyebrow: 'Proposal',
   heading: 'The simplest first step is a short message.',
   lead: "Together we'll discuss your situation and possible approach – afterward, you'll receive a proposal.",
+  processOverview: [
+    { icon: 'message-circle', title: 'Contact', text: 'Free and no obligation' },
+    { icon: 'file-text', title: 'Proposal', text: 'For the potential analysis' },
+    {
+      icon: 'flag',
+      title: 'Kickoff of the potential analysis',
+      text: 'You show me your landscape and situation',
+    },
+    {
+      icon: 'search',
+      title: 'Analysis',
+      text: 'I prepare and analyze, clarifying any questions directly with you',
+    },
+    { icon: 'lightbulb', title: 'Recommendation', text: 'A concrete recommendation' },
+  ],
   kostenlos: {
     eyebrow: 'Free',
-    heading: 'A no-obligation initial conversation is the first step.',
-    text: "Message or call me. In the initial conversation, we'll clarify your needs and expectations. Based on that, you'll receive a proposal to get started. The conversation and the proposal are both free.",
+    heading: 'Quick contact',
+    text: "Message or call me. I'll clarify your needs and send you a proposal for the potential analysis. Free and with no obligation.",
     ctaLabel: 'Book a call →',
     ctaHref: '/en/contact',
     note: 'Response within 2 business days.',
   },
   einstieg: {
-    eyebrow: 'Getting started',
+    eyebrow: 'The Potential Analysis',
     heading: 'Analysis and recommendation',
     intro:
-      "After the free conversation, the getting-started phase begins in three steps. At the end, you'll receive a recommendation – with no obligation. You then decide whether to implement it, and whether to continue working with me on it.",
+      "After the proposal, the potential analysis follows in three steps, starting at CHF 1,000. At the end, you'll receive a concrete recommendation. You then decide whether to implement it.",
     steps: [
       {
         duration: 'approx. 1 hr',
-        title: 'Initial conversation',
-        text: 'You show me your current situation – existing reports, processes, and challenges.',
+        title: 'Kickoff',
+        text: "You show me your landscape and situation: which reports exist today and how, where things get stuck, what you'd like to see.",
         highlighted: true,
       },
       {
         duration: 'approx. 3 hrs',
-        title: 'Analysis phase',
-        text: 'Partly together with you, partly on my own.',
+        title: 'Analysis',
+        text: 'Based on the kickoff, I prepare and analyze your situation. If questions come up, I clarify them directly with you.',
         highlighted: false,
       },
       {
         duration: 'approx. 1 hr',
         title: 'Recommendation',
-        text: 'A concrete recommendation for how to move forward – with no obligation.',
+        text: 'A concrete recommendation for how to move forward.',
         highlighted: false,
       },
     ],
     paragraphs: [
       "If your situation calls for more time, we'll plan for that accordingly – actual effort is based on what's needed and stated clearly in the proposal.",
-      "The recommendation marks the end of the getting-started phase. You're under no obligation – if you'd like to implement it, it becomes its own project.",
+      "The recommendation marks the end of the potential analysis. You're under no obligation – if you'd like to implement it, it becomes its own project.",
     ],
   },
   // Faithful translation of the legally-worded German original — keep the
@@ -158,7 +203,7 @@ export const offerte = {
       },
       {
         title: 'Independent execution',
-        text: 'The work is carried out using my own infrastructure and under my own professional responsibility.',
+        text: 'My work is carried out using my own infrastructure and under my own professional responsibility.',
       },
       {
         title: 'No fixed role',
@@ -204,7 +249,7 @@ export const kontakt = {
     emailLabel: 'Email',
     emailPlaceholder: 'name@company.com',
     messageLabel: "What's this about?",
-    messagePlaceholder: 'A few sentences about your situation are enough.',
+    messagePlaceholder: 'A few words about your company and your interest in excelerate Roth are enough.',
     submitLabel: 'Send message',
     note: "I'll get back to you within 2 business days.",
     successMessage: "Thank you for your message! I'll get back to you within 2 business days.",
