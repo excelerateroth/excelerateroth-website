@@ -9,14 +9,20 @@ interface FooterContent {
 interface Props {
   footer: FooterContent;
   homeHref: string;
+  lang?: 'de' | 'en';
 }
 
-const { footer, homeHref } = Astro.props;
+const { footer, homeHref, lang = 'de' } = Astro.props;
+
+const logoAlt =
+  lang === 'en'
+    ? 'excelerate Roth | Reporting & Controlling for Swiss SMEs'
+    : 'excelerate Roth | Reporting & Controlling für Schweizer KMU';
 ---
 
 <footer class="site-footer">
   <a href={homeHref} class="footer-logo-link">
-    <img src="/logo-excelerate.png" alt="excelerate Roth" class="footer-logo" />
+    <img src="/logo-excelerate.png" alt={logoAlt} class="footer-logo" />
   </a>
   <span class="tagline">{footer.tagline}</span>
   <div class="footer-links">

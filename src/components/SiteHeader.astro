@@ -15,11 +15,16 @@ interface Props {
 }
 
 const { nav, homeHref, activePage = 'none', lang, langSwitchHref } = Astro.props;
+
+const logoAlt =
+  lang === 'en'
+    ? 'excelerate Roth – Controlling Consulting for Swiss SMEs'
+    : 'excelerate Roth – Controlling-Beratung für Schweizer KMU';
 ---
 
 <header class="site-header">
   <a href={homeHref} class="logo-link">
-    <img src="/logo-excelerate.png" alt="excelerate Roth" class="logo" />
+    <img src="/logo-excelerate.png" alt={logoAlt} class="logo" />
   </a>
   <nav class="site-nav">
     <a href={nav.arbeit.href} class="nav-link">{nav.arbeit.label}</a>
