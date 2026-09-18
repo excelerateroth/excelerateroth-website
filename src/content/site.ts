@@ -95,7 +95,7 @@ export const ueberMich = {
   },
   eyebrow: 'Über mich',
   heading: 'Jennifer Roth',
-  lead: 'Jennifer Roth ist betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen – für Unternehmen in der Schweiz.',
+  lead: 'Ich bin betriebswirtschaftliche Sparringpartnerin für Reporting, Controlling und BI-Strukturen – für Unternehmen in der Schweiz.',
   motivation: {
     heading: 'Mein Antrieb',
     text: 'Zahlenverständnis und Technologie gehören für mich zusammen. Schon in meiner Festanstellung habe ich genau darauf hingearbeitet – Strukturen automatisiert statt nur ausgewertet. Selbständig gemacht habe ich mich, um mich noch stärker darauf zu konzentrieren.',

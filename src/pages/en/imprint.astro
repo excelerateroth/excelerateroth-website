@@ -32,6 +32,8 @@ import { impressum } from '../../content/site.en';
       </p>
 
       <p>Responsible for the content of this website: Jennifer Roth (address as above).</p>
+
+      <p class="stand">Last updated: September 18, 2026</p>
     </div>
   </section>
 </BaseLayout>
@@ -59,5 +61,12 @@ import { impressum } from '../../content/site.en';
   .text-column p {
     font-size: clamp(17px, 1.5vw, 19px);
     line-height: 1.65;
+  }
+
+  .stand {
+    font-size: 15px;
+    color: var(--ink-soft);
+    padding-top: 12px;
+    border-top: 1px solid var(--border-line);
   }
 </style>
